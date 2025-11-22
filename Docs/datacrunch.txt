@@ -1,0 +1,24 @@
+FN + Alt + F11
+
+double click Thisworkbook, copy and paste code below.
+
+Private Sub Workbook_SheetSelectionChange(ByVal Sh As Object, ByVal Target As Excel.Range)
+    ' Clear all previous highlights on this sheet
+    Sh.Cells.Interior.ColorIndex = 0
+
+    ' Highlight entire row (light yellow)
+    Target.EntireRow.Interior.Color = RGB(255, 255, 200)
+
+    ' Highlight entire column (light yellow)
+    Target.EntireColumn.Interior.Color = RGB(255, 255, 200)
+
+    ' Highlight the active cell slightly darker so it stands out
+    Target.Interior.Color = RGB(255, 230, 150)
+End Sub
+
+
+file save. 
+
+close window. 
+
+highlight rows as you crunch data NN

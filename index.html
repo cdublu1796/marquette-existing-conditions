@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Existing Conditions Photo Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    :root{
+      --bg:#0b1220;--panel:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--line:#1f2937;--accent:#60a5fa;--accent-2:#93c5fd;
+    }
+    html,body{height:100%;margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .app{display:grid;grid-template-columns:360px 1fr;grid-template-rows:64px 1fr;height:100%}
+    header{grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);background:#0a0f1d}
+    header h1{font-size:18px;margin:0}
+    header .hint{color:var(--muted);font-size:12px}
+
+    /* Hide the Tree chip on main page only */
+#quickFilters .chip[data-chip="tree"] {
+  display: none;
+}
+
+    /* NEW: top navigation for page switching */
+    .top-nav{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      margin-top:4px;
+    }
+    .nav-button{
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#020617;
+      color:var(--muted);
+      font-size:12px;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    .nav-button:hover{
+      background:#111827;
+      color:var(--text);
+    }
+    .nav-button.active{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#0b1120;
+    }
+
+    .master-filters{
+      margin-left:auto;
+      display:flex;
+      gap:16px;
+      align-items:flex-end;
+    }
+    .master-filter{
+      position:relative;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .mf-label{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      margin-bottom:2px;
+      color:var(--muted);
+    }
+    .mf-toggle{
+      background:#020617;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      color:var(--text);
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      cursor:pointer;
+      font-size:12px;
+    }
+    .mf-toggle span.chevron{font-size:10px;opacity:.7}
+    .mf-menu{
+      position:absolute;
+      right:0;
+      margin-top:4px;
+      background:#020617;
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:6px 8px;
+      box-shadow:0 10px 30px rgba(0,0,0,.6);
+      min-width:160px;
+      display:none;
+      z-index:1500;
+    }
+    .mf-menu.open{display:block}
+    .mf-menu label{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 4px;
+      border-radius:6px;
+      cursor:pointer;
+      color:var(--text);
+      font-size:12px;
+    }
+    .mf-menu label:hover{background:#0b1220}
+    .mf-menu input[type="checkbox"]{accent-color:var(--accent)}
+    .mf-menu .mf-actions{
+      display:flex;
+      justify-content:flex-end;
+      padding-top:4px;
+      border-top:1px solid var(--line);
+      margin-top:4px;
+    }
+    .mf-menu .mf-actions button{
+      border:none;
+      background:none;
+      color:var(--accent-2);
+      font-size:11px;
+      cursor:pointer;
+      padding:2px 4px;
+    }
+    #left{border-right:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0}
+    .tools{padding:12px;display:grid;gap:8px;border-bottom:1px solid var(--line)}
+    .row{display:flex;gap:8px;align-items:center}
+    input[type=text]{width:100%;background:#0b1220;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:10px}
+    .btn{background:#0b1220;color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:10px;cursor:pointer}
+    .btn:hover{border-color:#334155}
+    /* Active chip state */
+    .btn.chip.active{
+      border-color:var(--accent);
+      background:#111827;
+      color:#e5e7eb;
+    }
+    #gallery{padding:12px;display:grid;gap:10px;overflow:auto}
+    .empty{color:var(--muted);font-size:13px;padding:8px 12px}
+    .card{
+      background:#0b1220;border:1px solid var(--line);border-radius:14px;padding:10px;display:flex;gap:10px;align-items:center;cursor:pointer;
+      transition:box-shadow .15s ease,border-color .15s ease,transform .05s ease;
+    }
+    .card:hover{border-color:#334155}
+    .card.selected{
+      border-color:var(--accent);
+      box-shadow:0 0 0 2px rgba(96,165,250,.25), 0 6px 20px rgba(0,0,0,.45);
+      transform:translateY(-1px);
+    }
+    .thumb{width:72px;height:72px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:#0a0f1d}
+    .meta{display:grid;gap:3px}
+    .meta .title{font-weight:600}
+    .meta .small{color:var(--muted);font-size:12px}
+    #map{width:100%;height:100%}
+    .footer{padding:8px 12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+    .num{
+      background:#111827;border:2px solid #1f2937;border-radius:999px;width:28px;height:28px;line-height:24px;text-align:center;font-weight:700;color:#e5e7eb;box-shadow:0 1px 6px rgba(0,0,0,.35)
+    }
+    .num .txt{position:relative;top:2px}
+    .num.sel{
+      background:var(--accent);
+      border-color:#2563eb;
+      color:#0b1220;
+      box-shadow:0 0 0 2px rgba(96,165,250,.35), 0 6px 20px rgba(0,0,0,.45);
+    }
+    .overlay-hint{position:absolute;top:80px;right:16px;background:#0b1220;border:1px solid var(--line);padding:8px 10px;border-radius:10px;color:#a1a1aa;z-index:500}
+    @media (max-width: 900px){.app{grid-template-columns:1fr;grid-template-rows:64px 300px 1fr}#left{grid-row:3}#map{grid-row:2}}
+    .viewer{
+      position:fixed; top:76px; right:16px;
+      width:32vw; height:32vw;
+      min-width:360px; min-height:360px;
+      max-height:80vh;
+      display:none; flex-direction:column;
+      background:#0b1220; border:1px solid var(--line); border-radius:12px;
+      z-index:1200; box-shadow:0 8px 30px rgba(0,0,0,.45)
+    }
+    .viewer.open{display:flex}
+    .viewer .bar{display:flex;align-items:center;gap:8px;justify-content:space-between;padding:8px 10px;border-bottom:1px solid var(--line)}
+    .viewer .left{display:flex;gap:8px;align-items:center}
+    .viewer .title{font-size:14px;color:#cbd5e1}
+    .viewer .controls{display:flex;gap:6px}
+    .viewer .controls .btn{padding:6px 10px}
+    .viewer .close{cursor:pointer;font-size:18px;color:#e5e7eb;padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:#0b1220}
+    .viewer .stage{
+      position:relative;flex:1;overflow:hidden;background:#0a0f1d;
+      cursor:grab;
+    }
+    .viewer .stage.dragging{ cursor:grabbing; }
+    .viewer img{
+      position:absolute; top:50%; left:50%;
+      transform:translate3d(-50%, -50%, 0) scale(1);
+      transform-origin:center center;
+      user-select:none; pointer-events:auto;
+      max-width:none; max-height:none;
+      will-change: transform;
+    }
+    .viewer .hint{position:absolute;bottom:8px;left:10px;color:#94a3b8;font-size:12px}
+    .card.pulse{outline:2px solid rgba(0,0,0,.15);box-shadow:0 0 0 3px rgba(0,0,0,.08) inset;transition:outline .2s ease}
+    /* STATUS COLORS */
+    .status-line { font-size:12px; line-height:1.25rem; }
+    .status-line .label { color: var(--muted); }
+    .status { font-weight:600 }
+    .red { color:#ef4444 }
+    .green { color:#22c55e }
+    .yellow { color:#eab308 }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Marquette Senior Living - Existing Conditions</h1>
+        <div class="top-nav">
+          <a href="index.html" class="nav-button active">Existing Conditions</a>
+          <a href="trees.html" class="nav-button">Trees</a>
+        </div>
+        <div class="hint"><b></b><b></b><b></b></div>
+      </div>
+      <div class="master-filters">
+        <div class="master-filter">
+          <div class="mf-label">Phase Filter</div>
+          <button class="mf-toggle" id="mfToggle">
+            <span id="mfLabelText">All Phases</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="mf-menu" id="mfMenu">
+            <label><input type="checkbox" value="phase 1a" checked> Phase 1a - Preconstruction</label>
+            <label><input type="checkbox" value="phase 1b" checked> Phase 1b - Commons</label>
+            <label><input type="checkbox" value="phase 2" checked> Phase 2 - Terrace II</label>
+            <label><input type="checkbox" value="phase 3" checked> Phase 3 - Flats</label>
+            <div class="mf-actions">
+              <button type="button" id="mfAll">All</button>
+              <button type="button" id="mfNone">None</button>
+            </div>
+          </div>
+        </div>
+        <div class="master-filter">
+          <div class="mf-label">Designation Filter</div>
+          <button class="mf-toggle" id="dfToggle">
+            <span id="dfLabelText">All Designations</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="mf-menu" id="dfMenu">
+            <label><input type="checkbox" value="mq" checked> MQ</label>
+            <label><input type="checkbox" value="gb" checked> GB</label>
+            <label><input type="checkbox" value="v" checked> V</label>
+            <label><input type="checkbox" value="thw" checked> THW</label>
+            <label><input type="checkbox" value="sp" checked> SP</label>
+            <div class="mf-actions">
+              <button type="button" id="dfAll">All</button>
+              <button type="button" id="dfNone">None</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="left">
+      <div class="tools">
+        <div class="row">
+          <input id="q" type="text" placeholder="Search by #, title, tags, SSC/DWG status…" />
+          <button class="btn" id="clear">Clear</button>
+        </div>
+        <div class="row" style="justify-content:space-between">
+          <label class="btn" style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;">Load CSV<input id="csvFile" type="file" accept=".csv" style="display:none" /></label>
+          <button class="btn" id="fit">Fit Plan</button>
+        </div>
+
+        <!-- Quick filters & result count -->
+        <div class="row" id="quickFilters" style="gap:.5rem; align-items:center; flex-wrap:wrap; margin:.35rem 0;">
+          <div id="resultCount" style="font-size:12px; color:var(--muted); margin-right:.5rem;"></div>
+          <div class="chips" style="display:flex; gap:.4rem; flex-wrap:wrap;">
+
+            <!-- SSC status chips -->
+            <button class="btn chip" data-chip="must go" data-kind="ssc">Must Go</button>
+            <button class="btn chip" data-chip="can stay" data-kind="ssc">Can Stay</button>
+
+            <!-- DWG status chips -->
+            <button class="btn chip" data-chip="remove" data-kind="dwg">Remove</button>
+            <button class="btn chip" data-chip="relocate" data-kind="dwg">Relocate</button>
+            <button class="btn chip" data-chip="keep" data-kind="dwg">Keep</button>
+            <button class="btn chip" data-chip="not noted" data-kind="dwg">Not Noted</button>
+
+            <span style="margin:0 .25rem; font-size:12px; color:var(--muted);">|</span>
+
+            <!-- Tag-type chips -->
+            <button class="btn chip" data-chip="light" data-kind="tag">Light</button>
+            <button class="btn chip" data-chip="utility" data-kind="tag">Utility</button>
+            <button class="btn chip" data-chip="tree" data-kind="tag">Tree</button>
+            <button class="btn chip" data-chip="site furnishing" data-kind="tag">Site Furnishing</button>
+            <button class="btn chip" data-chip="special feature" data-kind="tag">Special Feature</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="gallery"></div>
+      <div class="footer"><span id="count">0 items</span><span>Leaflet • CSV</span></div>
+    </section>
+
+    <section style="position:relative">
+      <div id="map"></div>
+    </section>
+  </div>
+
+  <!-- Viewer -->
+  <aside class="viewer" id="viewer" aria-hidden="true">
+    <div class="bar">
+      <div class="left"><span class="title" id="vTitle">Preview</span></div>
+      <div class="controls">
+        <button class="btn" id="zoomOut">−</button>
+        <button class="btn" id="zoomReset">100%</button>
+        <button class="btn" id="zoomIn">+</button>
+        <a class="btn" id="vDownload" href="#" download>Download</a>
+        <button class="close" id="vClose">×</button>
+      </div>
+    </div>
+    <div class="stage" id="vStage">
+      <img id="vImg" alt="">
+      <div class="hint">Left-click & drag to pan • Wheel or +/− to zoom toward cursor • Double-click zoom (Shift+double-click out)</div>
+    </div>
+  </aside>
+
+  <script>
+    const PLAN_IMAGE = 'civil_drawing.png';
+    const CSV_PATH   = 'manifest.csv';
+    const PHOTOS_DIR = 'Photos';
+
+    let map, planBounds, planSize = {w:0,h:0};
+    let allItems = [];
+    let markers = new Map();
+    let selectedId = null;
+
+    // Master phase filter state
+    const MASTER_PHASE_KEYS = ['phase 1a','phase 1b','phase 2','phase 3'];
+    const masterPhaseState = {};
+    MASTER_PHASE_KEYS.forEach(k => { masterPhaseState[k] = true; });
+
+    // Designation filter state
+    const DESIGNATION_KEYS = ['mq','gb','v','thw','sp'];
+    const designationState = {};
+    DESIGNATION_KEYS.forEach(k => { designationState[k] = true; });
+
+    // Quick filter (chip) state: one value per group
+    // values are either null or a lowercase string like 'must go', 'remove', 'light'
+    const quickFilter = {
+      ssc: null,
+      dwg: null,
+      tag: null
+    };
+
+    const $ = s => document.querySelector(s);
+    const esc = s => (s||'').toString().replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+    /* Map */
+    function initMap(){
+      map = L.map('map', { crs: L.CRS.Simple, minZoom: -5, maxZoom: 5, zoomControl: true, attributionControl: false, preferCanvas: true });
+    }
+    function loadPlan(){
+      return new Promise((resolve, reject)=>{
+        const img = new Image();
+        img.onload = () => resolve({w: img.naturalWidth, h: img.naturalHeight});
+        img.onerror = () => reject(new Error('Plan image missing or unreadable: ' + PLAN_IMAGE));
+        img.src = PLAN_IMAGE;
+      });
+    }
+    function buildBounds(size){
+      const southWest = L.point(0, size.h);
+      const northEast = L.point(size.w, 0);
+      const bounds = L.latLngBounds(map.unproject(southWest, 0), map.unproject(northEast, 0));
+      planBounds = bounds;
+      L.imageOverlay(PLAN_IMAGE, bounds).addTo(map);
+      map.fitBounds(bounds);
+    }
+    function pxToLatLng(x, y){ return map.unproject([x, y], 0); }
+
+    function numberedIcon(n, selected=false){
+      return L.divIcon({
+        className: selected ? 'num sel' : 'num',
+        html: '<span class="txt">'+String(n)+'</span>',
+        iconSize:[28,28], iconAnchor:[14,14]
+      });
+    }
+    function addMarker(item){
+      const id = String(item.id);
+      const x = Number(item.x_px), y = Number(item.y_px);
+      if (!(isFinite(x) && isFinite(y))) return;
+      const ll = pxToLatLng(x, y);
+      const m = L.marker(ll, { icon: numberedIcon(id, false) }).addTo(map);
+      m.on('click', () => selectItem(id, {openViewer:true, center:true}));
+      markers.set(id, m);
+    }
+
+    /* Gallery */
+    function renderGallery(list){
+      const g = $('#gallery'); g.innerHTML = '';
+      if (!list || !list.length){
+        g.innerHTML = '<div class="empty">No items yet. Add rows to <b>manifest.csv</b> and place images in <b>Photos/</b>.</div>';
+      } else {
+        for (const it of list){
+          const src = it.photo_file ? `${PHOTOS_DIR}/${it.photo_file}` : '';
+          const ssc = (it.ssc_status||'').toLowerCase().trim();
+          const dwg = (it.drwg_status||'').toLowerCase().trim();
+          const sscClass = (ssc==='must go') ? 'red' : (ssc==='can stay' ? 'green' : '');
+          const dwgClass = (dwg==='remove') ? 'red' : (dwg==='relocate') ? 'red' : (dwg==='keep') ? 'green' : (dwg==='not noted') ? 'yellow' : '';
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.dataset.id = String(it.id);
+          card.innerHTML = `
+  <img class="thumb"
+       src="${esc(src)}"
+       alt=""
+       loading="lazy"
+       decoding="async"
+       onerror="this.style.opacity=0.2; this.alt='Photo not found'; this.parentElement.insertAdjacentHTML('beforeend', '<div style=\'position:absolute;bottom:6px;left:6px;background:rgba(0,0,0,.65);color:#fff;padding:2px 6px;border-radius:4px;font-size:10px\'>Missing photo</div>');">
+  <div class="meta">
+    <div class="title">#${esc(it.id)} — ${esc(it.title||'Untitled')}</div>
+    <div class="small">${esc((it.tags||'').toString().trim())}</div>
+    <div class="status-line">
+      <span class="label">SSC Status: </span>
+      <span class="status ${sscClass}">${esc((it.ssc_status||'')||'—')}</span>
+    </div>
+    <div class="status-line">
+      <span class="label">DWG Status: </span>
+      <span class="status ${dwgClass}">${esc((it.drwg_status||'')||'—')}</span>
+    </div>
+  </div>
+`;
+card.addEventListener('click', ()=> 
+  selectItem(String(it.id), {openViewer:true, center:true})
+);
+g.appendChild(card);
+        }
+      }
+      $('#count').textContent = (list?list.length:0) + ' items';
+      updateGallerySelection();
+    }
+
+    function updateGallerySelection(){
+      const cards = document.querySelectorAll('#gallery .card');
+      cards.forEach(el => {
+        if (selectedId && el.dataset.id === String(selectedId)) {
+          el.classList.add('selected');
+          el.scrollIntoView({behavior:'smooth', block:'center'});
+        } else {
+          el.classList.remove('selected');
+        }
+      });
+    }
+
+    function selectItem(id, opts={}){
+      selectedId = String(id);
+      updateGallerySelection();
+      markers.forEach((m, mid) => { m.setIcon(numberedIcon(mid, mid === selectedId)); });
+      const m = markers.get(selectedId);
+      if (opts.center && m) map.setView(m.getLatLng(), Math.max(map.getZoom(), 0));
+      if (opts.openViewer){
+        const it = allItems.find(r => String(r.id) === selectedId);
+        if (it) openViewer(it);
+      }
+    }
+
+    /* Search + master phase filter */
+    function getActivePhaseKeys(){
+      return MASTER_PHASE_KEYS.filter(k => masterPhaseState[k]);
+    }
+
+    function matchesPhaseFilter(it, activePhases){
+      if (!activePhases || !activePhases.length) return false;
+      const rawPhase = (it.phase || '').toString().toLowerCase().trim();
+      if (!rawPhase){
+        // If all phases are selected, allow items without a phase to remain visible
+        if (activePhases.length === MASTER_PHASE_KEYS.length) return true;
+        return false;
+      }
+      return activePhases.includes(rawPhase);
+    }
+
+    function updateMasterFilterLabel(){
+      const labelEl = document.getElementById('mfLabelText');
+      if (!labelEl) return;
+      const active = getActivePhaseKeys();
+      if (!active.length || active.length === MASTER_PHASE_KEYS.length){
+        labelEl.textContent = 'All Phases';
+      } else {
+        const pretty = active.map(k => {
+          if (k === 'phase 1a') return 'Phase 1a - Preconstruction';
+          if (k === 'phase 1b') return 'Phase 1b - Commons';
+          if (k === 'phase 2') return 'Phase 2 - Terrace II';
+          if (k === 'phase 3') return 'Phase 3 - Flats';
+          return k;
+        });
+        labelEl.textContent = pretty.join(', ');
+      }
+    }
+
+    function getActiveDesignationKeys(){
+      return DESIGNATION_KEYS.filter(k => designationState[k]);
+    }
+
+    function matchesDesignationFilter(it, activeDesignations){
+      if (!activeDesignations || !activeDesignations.length) return false;
+      const raw = (it.designation || '').toString().toLowerCase().trim();
+      if (!raw){
+        if (activeDesignations.length === DESIGNATION_KEYS.length) return true;
+        return false;
+      }
+      return activeDesignations.includes(raw);
+    }
+
+    function updateDesignationFilterLabel(){
+      const labelEl = document.getElementById('dfLabelText');
+      if (!labelEl) return;
+      const active = getActiveDesignationKeys();
+      if (!active.length || active.length === DESIGNATION_KEYS.length){
+        labelEl.textContent = 'All Designations';
+      } else {
+        const pretty = active.map(k => k.toUpperCase());
+        labelEl.textContent = pretty.join(', ');
+      }
+    }
+
+    // --- Quick filter helpers (chips) ---
+    function setQuickFilter(type, value){
+      // type is 'ssc' | 'dwg' | 'tag'
+      const current = quickFilter[type];
+      if (current === value){
+        quickFilter[type] = null;   // toggle off
+      } else {
+        quickFilter[type] = value;  // set new value
+      }
+      updateChipUI();
+      applySearch();
+    }
+
+    function updateChipUI(){
+      document.querySelectorAll('#quickFilters .chip').forEach(btn => {
+        const kind = btn.dataset.kind || 'tag';
+        const chipVal = (btn.dataset.chip || '').toLowerCase();
+        if (quickFilter[kind] && quickFilter[kind] === chipVal){
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    function applySearch(){
+      const q = ($('#q').value || '').toLowerCase().trim();
+      let list = allItems;
+
+      // Free text search (unchanged)
+      if (q){
+        list = allItems.filter(r => (
+          String(r.id).toLowerCase().includes(q) ||
+          (r.title||'').toLowerCase().includes(q) ||
+          (r.tags||'').toLowerCase().includes(q) ||
+          (r.ssc_status||'').toLowerCase().includes(q) ||
+          (r.drwg_status||'').toLowerCase().includes(q)
+        ));
+      }
+
+      // Phase filter
+      const activePhases = getActivePhaseKeys();
+      if (activePhases.length){
+        list = list.filter(it => matchesPhaseFilter(it, activePhases));
+      }
+
+      // Designation filter
+      const activeDesignations = getActiveDesignationKeys();
+      if (activeDesignations.length){
+        list = list.filter(it => matchesDesignationFilter(it, activeDesignations));
+      }
+
+      // Quick filter chips (SSC / DWG / Tag) layered on top
+      if (quickFilter.ssc){
+        const val = quickFilter.ssc;
+        list = list.filter(r => (r.ssc_status || '').toLowerCase().includes(val));
+      }
+      if (quickFilter.dwg){
+        const val = quickFilter.dwg;
+        list = list.filter(r => (r.drwg_status || '').toLowerCase().includes(val));
+      }
+      if (quickFilter.tag){
+        const val = quickFilter.tag;
+        list = list.filter(r => (r.tags || '').toLowerCase().includes(val));
+      }
+
+      // Markers + gallery update
+      for (const it of allItems){
+        const m = markers.get(String(it.id));
+        if (!m) continue;
+        const show = list.includes(it);
+        if (show && !map.hasLayer(m)) m.addTo(map);
+        if (!show && map.hasLayer(m)) map.removeLayer(m);
+      }
+      const rc = document.getElementById('resultCount');
+      if (rc) rc.textContent = list.length + ' items';
+      renderGallery(list);
+    }
+
+    /* CSV loader with robust header normalization */
+    function normalizeRowKeys(row){
+      const norm = {};
+      for (const k in row){
+        if (!Object.prototype.hasOwnProperty.call(row, k)) continue;
+        const clean = String(k).replace(/^\uFEFF/, '').trim().toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
+        norm[clean] = (row[k] ?? '').toString().trim();
+      }
+      return norm;
+    }
+
+    async function loadCSV(url){
+      try{
+        const res = await fetch(url, {cache:'no-store'});
+        if (!res.ok) throw new Error('CSV not found');
+        const text = await res.text();
+        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+        const rows = parsed.data.map(r => {
+          const n = normalizeRowKeys(r);
+          return {
+            id: n.id || n.num || n.no || '',
+            title: n.title || n.name || '',
+            x_px: n.x_px || n.x || '',
+            y_px: n.y_px || n.y || '',
+            photo_file: n.photo_file || n.file || n.filename || '',
+            tags: n.tags || n.tag || '',
+            ssc_status: n.ssc_status || n.sscstatus || n.ssc || n['ssc_status'] || '',
+            drwg_status: n.drwg_status || n.dwg_status || n.dwgstatus || n.dwg || n['dwg_status'] || '',
+            phase: n.phase || '',
+            designation: n.designation || n.owner || n.responsible || ''
+          };
+        }).filter(r => String(r.id).trim() !== '');
+        return rows;
+      }catch(e){
+        console.warn('CSV load failed:', e.message);
+        return [];
+      }
+    }
+
+    /* Viewer */
+    const viewer = { el:null, img:null, titleEl:null, dl:null, stage:null, zoom:1, min:1, max:6, tx:0, ty:0, dragging:false, sx:0, sy:0, vx:0, vy:0, tz:1, raf:0 };
+    function initViewer(){
+      viewer.el = $('#viewer');
+      viewer.img = $('#vImg');
+      viewer.titleEl = $('#vTitle');
+      viewer.stage = $('#vStage');
+      viewer.dl = $('#vDownload');
+
+      $('#vClose').addEventListener('click', closeViewer);
+      $('#zoomIn').addEventListener('click', ()=> zoomBy( 0.25, viewer.stage.clientWidth/2, viewer.stage.clientHeight/2));
+      $('#zoomOut').addEventListener('click',()=> zoomBy(-0.25, viewer.stage.clientWidth/2, viewer.stage.clientHeight/2));
+      $('#zoomReset').addEventListener('click', ()=> fitToContain());
+
+      viewer.img.addEventListener('dragstart', e => e.preventDefault());
+      viewer.stage.addEventListener('wheel', (e)=>{
+        e.preventDefault();
+        const rect = viewer.stage.getBoundingClientRect();
+        const mx = e.clientX - rect.left;
+        const my = e.clientY - rect.top;
+        const delta = Math.sign(e.deltaY);
+        zoomBy(delta < 0 ? 0.2 : -0.2, mx, my);
+      }, {passive:false});
+
+      const startDrag = (e)=>{
+        if (e.button !== 0) return;
+        e.preventDefault();
+        viewer.dragging = true;
+        viewer.sx = e.clientX; viewer.sy = e.clientY;
+        viewer.vx = 0; viewer.vy = 0;
+        viewer.stage.classList.add('dragging');
+      };
+      const moveDrag = (e)=>{
+        if (!viewer.dragging) return;
+        const dx = e.clientX - viewer.sx;
+        const dy = e.clientY - viewer.sy;
+        viewer.tx += dx; viewer.ty += dy;
+        viewer.vx = dx; viewer.vy = dy;
+        viewer.sx = e.clientX; viewer.sy = e.clientY;
+      };
+      const endDrag = ()=>{
+        if (!viewer.dragging) return;
+        viewer.dragging = false;
+        viewer.stage.classList.remove('dragging');
+      };
+
+      viewer.stage.addEventListener('mousedown', startDrag);
+      viewer.img.addEventListener('mousedown', startDrag);
+      window.addEventListener('mousemove', moveDrag);
+      window.addEventListener('mouseup', endDrag);
+
+      viewer.stage.addEventListener('dblclick', (e)=>{
+        const rect = viewer.stage.getBoundingClientRect();
+        const mx = e.clientX - rect.left;
+        const my = e.clientY - rect.top;
+        zoomBy(e.shiftKey ? -0.4 : 0.4, mx, my);
+      });
+
+      const tick = ()=>{
+        const zErr = viewer.tz - viewer.zoom;
+        viewer.zoom += zErr * 0.18;
+        if (!viewer.dragging){
+          viewer.tx += viewer.vx; viewer.ty += viewer.vy;
+          viewer.vx *= 0.90; viewer.vy *= 0.90;
+          if (Math.abs(viewer.vx) < 0.01) viewer.vx = 0;
+          if (Math.abs(viewer.vy) < 0.01) viewer.vy = 0;
+        }
+        applyTransform();
+        viewer.raf = requestAnimationFrame(tick);
+      };
+      viewer.raf = requestAnimationFrame(tick);
+    }
+    function fitToContain(){
+      const rect = viewer.stage.getBoundingClientRect();
+      const iw = viewer.img.naturalWidth || 1;
+      const ih = viewer.img.naturalHeight || 1;
+      const fit = Math.min(rect.width / iw, rect.height / ih);
+      viewer.min = Math.max(0.05, Math.min(fit, viewer.max));
+      viewer.tz = viewer.min; viewer.zoom = viewer.min; viewer.tx = 0; viewer.ty = 0;
+      $('#zoomReset').textContent = '100%';
+    }
+    function zoomBy(delta, mx, my){
+      const prev = viewer.zoom;
+      const next = Math.max(viewer.min, Math.min(viewer.max, prev + delta));
+      viewer.tz = next;
+      const rect = viewer.stage.getBoundingClientRect();
+      const cx = rect.width / 2 + viewer.tx;
+      const cy = rect.height / 2 + viewer.ty;
+      const k = next / prev;
+      viewer.tx = (cx - mx) * (1 - k) + viewer.tx;
+      viewer.ty = (cy - my) * (1 - k) + viewer.ty;
+      $('#zoomReset').textContent = Math.round((next / viewer.min) * 100) + '%';
+    }
+    function applyTransform(){
+      viewer.img.style.transform = `translate3d(-50%, -50%, 0) translate(${viewer.tx}px, ${viewer.ty}px) scale(${viewer.zoom})`;
+    }
+    function openViewer(item){
+      const src = item.photo_file ? `${PHOTOS_DIR}/${item.photo_file}` : '';
+      viewer.img.onload = ()=>{ fitToContain(); };
+      viewer.img.src = src;
+      viewer.titleEl.textContent = `#${item.id} — ${item.title || 'Untitled'}`;
+      viewer.dl.href = src;
+      viewer.el.classList.add('open'); viewer.el.setAttribute('aria-hidden','false');
+    }
+    function closeViewer(){ viewer.el.classList.remove('open'); viewer.el.setAttribute('aria-hidden','true'); viewer.img.src=''; }
+
+    /* Debounce */
+    function debounce(fn, ms){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn.apply(this,a), ms); } }
+
+    /* CSV validator (warnings only) */
+    function validateCSV(items){
+      const allowedSSC = ['must go','can stay',''];
+      const allowedDWG = ['remove','relocate','keep','not noted',''];
+      const bad = [];
+      items.forEach((r,idx)=>{
+        const ssc = (r.ssc_status||'').toLowerCase().trim();
+        const dwg = (r.drwg_status||'').toLowerCase().trim();
+        if (!allowedSSC.includes(ssc)) bad.push({row:idx+1, field:'ssc_status', value:r.ssc_status});
+        if (!allowedDWG.includes(dwg)) bad.push({row:idx+1, field:'drwg_status', value:r.drwg_status});
+      });
+      if (!bad.length) return;
+      const host = document.querySelector('header') || document.body;
+      const div = document.createElement('div');
+      div.style.cssText = 'background:#fff3cd;border:1px solid #ffe69c;color:#664d03;padding:.5rem .75rem;margin:.5rem 0;border-radius:.5rem;font-size:12px;';
+      div.innerHTML = '<b>CSV warnings:</b> ' + bad.map(b=>`Row ${b.row} → ${b.field} = "${(b.value||'').toString()}"`).join('; ');
+      host.appendChild(div);
+    }
+
+    /* Main */
+    function initMasterFilterUI(){
+      const toggle = document.getElementById('mfToggle');
+      const menu = document.getElementById('mfMenu');
+      if (!toggle || !menu) return;
+
+      const checkboxes = menu.querySelectorAll('input[type="checkbox"]');
+
+      checkboxes.forEach(cb => {
+        const key = cb.value.toLowerCase();
+        if (Object.prototype.hasOwnProperty.call(masterPhaseState, key)){
+          cb.checked = !!masterPhaseState[key];
+        }
+        cb.addEventListener('change', () => {
+          const k = cb.value.toLowerCase();
+          if (Object.prototype.hasOwnProperty.call(masterPhaseState, k)){
+            masterPhaseState[k] = cb.checked;
+          }
+          updateMasterFilterLabel();
+          applySearch();
+        });
+      });
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('open')) return;
+        if (!menu.contains(e.target) && e.target !== toggle){
+          menu.classList.remove('open');
+        }
+      });
+
+      const allBtn = document.getElementById('mfAll');
+      const noneBtn = document.getElementById('mfNone');
+      if (allBtn){
+        allBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          MASTER_PHASE_KEYS.forEach(k => { masterPhaseState[k] = true; });
+          checkboxes.forEach(cb => { cb.checked = true; });
+          updateMasterFilterLabel();
+          applySearch();
+        });
+      }
+      if (noneBtn){
+        noneBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          MASTER_PHASE_KEYS.forEach(k => { masterPhaseState[k] = false; });
+          checkboxes.forEach(cb => { cb.checked = false; });
+          updateMasterFilterLabel();
+          applySearch();
+        });
+      }
+
+      updateMasterFilterLabel();
+    }
+
+    function initDesignationFilterUI(){
+      const toggle = document.getElementById('dfToggle');
+      const menu = document.getElementById('dfMenu');
+      if (!toggle || !menu) return;
+
+      const checkboxes = menu.querySelectorAll('input[type="checkbox"]');
+
+      checkboxes.forEach(cb => {
+        const key = cb.value.toLowerCase();
+        if (Object.prototype.hasOwnProperty.call(designationState, key)){
+          cb.checked = !!designationState[key];
+        }
+        cb.addEventListener('change', () => {
+          const k = cb.value.toLowerCase();
+          if (Object.prototype.hasOwnProperty.call(designationState, k)){
+            designationState[k] = cb.checked;
+          }
+          updateDesignationFilterLabel();
+          applySearch();
+        });
+      });
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('open')) return;
+        if (!menu.contains(e.target) && e.target !== toggle){
+          menu.classList.remove('open');
+        }
+      });
+
+      const allBtn = document.getElementById('dfAll');
+      const noneBtn = document.getElementById('dfNone');
+      if (allBtn){
+        allBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          DESIGNATION_KEYS.forEach(k => { designationState[k] = true; });
+          checkboxes.forEach(cb => { cb.checked = true; });
+          updateDesignationFilterLabel();
+          applySearch();
+        });
+      }
+      if (noneBtn){
+        noneBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          DESIGNATION_KEYS.forEach(k => { designationState[k] = false; });
+          checkboxes.forEach(cb => { cb.checked = false; });
+          updateDesignationFilterLabel();
+          applySearch();
+        });
+      }
+
+      updateDesignationFilterLabel();
+    }
+
+    async function main(){
+      initMap();
+      initViewer();
+      let size;
+      try{ size = await loadPlan(); }
+      catch(e){ alert(e.message); size = {w: 3000, h: 2000}; }
+      buildBounds(size);
+
+      initMasterFilterUI();
+      initDesignationFilterUI();
+
+      allItems = await loadCSV(CSV_PATH);
+      for (const it of allItems){ addMarker(it); }
+      renderGallery(allItems);
+      validateCSV(allItems);
+
+      const qEl = document.getElementById('q');
+      if (qEl){ qEl.addEventListener('input', debounce(applySearch,150)); }
+
+      // Wire quick filter chips (SSC / DWG / Tag)
+      document.querySelectorAll('#quickFilters .chip').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const kind = btn.dataset.kind || 'tag';
+          const val = (btn.dataset.chip || '').toLowerCase();
+          setQuickFilter(kind, val);
+        });
+      });
+
+      (function(){
+        const rc=document.getElementById('resultCount');
+        if(rc) rc.textContent = allItems.length + ' items';
+      })();
+      applySearch();
+
+      // UI hooks
+      document.getElementById('clear').addEventListener('click', ()=>{
+        document.getElementById('q').value='';
+        applySearch();
+      });
+      document.getElementById('fit').addEventListener('click', ()=> map.fitBounds(planBounds));
+
+      // Optional CSV loader
+      document.getElementById('csvFile').addEventListener('change', (ev)=>{
+        const f = ev.target.files[0];
+        if (!f) return;
+        const reader = new FileReader();
+        reader.onload = (e)=>{
+          const text = e.target.result;
+          const parsed = Papa.parse(text, { header:true, skipEmptyLines:true });
+          allItems = parsed.data.map(r => {
+            const n = normalizeRowKeys(r);
+            return {
+              id: n.id || n.num || n.no || '',
+              title: n.title || n.name || '',
+              x_px: n.x_px || n.x || '',
+              y_px: n.y_px || n.y || '',
+              photo_file: n.photo_file || n.file || n.filename || '',
+              tags: n.tags || n.tag || '',
+              ssc_status: n.ssc_status || n.sscstatus || n.ssc || n['ssc_status'] || '',
+              drwg_status: n.drwg_status || n.dwg_status || n.dwgstatus || n.dwg || n['dwg_status'] || '',
+              designation: n.designation || n.owner || n.responsible || ''
+            };
+          }).filter(r => String(r.id).trim() !== '');
+          // rebuild markers
+          markers.forEach(m => map.removeLayer(m)); markers.clear();
+          for (const it of allItems){ addMarker(it); }
+          renderGallery(allItems);
+          validateCSV(allItems);
+
+          if (qEl){ qEl.addEventListener('input', debounce(applySearch,150)); }
+
+          // Re-wire chips after new CSV load
+          document.querySelectorAll('#quickFilters .chip').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const kind = btn.dataset.kind || 'tag';
+              const val = (btn.dataset.chip || '').toLowerCase();
+              setQuickFilter(kind, val);
+            });
+          });
+
+          (function(){
+            const rc=document.getElementById('resultCount');
+            if(rc) rc.textContent = allItems.length + ' items';
+          })();
+          applySearch();
+        };
+        reader.readAsText(f);
+      });
+    }
+    main();
+  </script>
+</body>
+</html>
