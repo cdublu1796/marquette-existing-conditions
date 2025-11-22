@@ -1,301 +1,301 @@
 id,title,tags,ssc_status,drwg_status,photo_file,x_px,y_px,phase,designation
-1,Electrical Box,Electrical ,Can Stay,Keep,IMG_0001.jpg,4434,2143,Phase 3,
-2,Storm Outlet,Electrical/Utility,Can Stay,Keep,IMG_0002.jpg,4388,2115,Phase 3,
-3,Irrigation Water Ground Outlet,Utility,Can Stay,Keep,IMG_0003.jpg,4408,2045,Phase 3,V
-4,Water Meters/Storm Outlet,Utility,Can Stay,Keep,IMG_0004.jpg,4384,2042,Phase 3,
-5,Electrical Box,Electrical,Can Stay,Keep,IMG_0005.jpg,4382,2092,Phase 3,
-6,Ford Meter Box,Utility,Can Stay,Keep,IMG_0006.JPG,4335,2080,Phase 3,
-7,Electrical Panels - Guard Shack,Electrical,Can Stay,Keep,IMG_0007.JPG,4291,2149,Phase 3,THW
-8,Fire hydrant ,Utility,Can Stay,Keep,IMG_0008.JPG,4313,2114,Phase 3,
-9,Landscape Light,Light,Can Stay,Keep,IMG_0009.JPG,4297,2083,Phase 3,
-10,Landscape Light,Light,Can Stay,Keep,IMG_0010.JPG,4270,2069,Phase 3,
-11,Landscape Light,Light,Can Stay,Keep,IMG_0011.JPG,4255,2053,Phase 3,
-12,Light Pole,Light,Can Stay,Keep,IMG_0012.JPG,4201,2026,Phase 3,
-13,Light Pole,Light,Can Stay,Keep,IMG_0013.JPG,4204,1921,Phase 1b,
-14,Light Pole,Light,Can Stay,Keep,IMG_0014.JPG,4212,1795,Phase 1b,
-15,Landscape Light,Light,Can Stay,Keep,IMG_0015.JPG,4247,1747,Phase 1b,
-16,Lanscape Light,Light,Can Stay,Keep,IMG_0016.JPG,4260,1723,Phase 1b,
-17,Landscape Light,Light,Can Stay ,Keep,IMG_0017.JPG,4283,1703,Phase 1b,
-18,Concrete Swale,Utility,Can Stay ,Keep,IMG_0018.JPG,4386,1704,Phase 1b,
-19,Irrigation Rain Bird,Utility,Can Stay,Keep,IMG_0019.JPG,4324,1649,Phase 1b,V
-20,Marquette Rock,Special Feature,Can Stay,Keep,IMG_0020.JPG,4331,1541,Phase 1b,MQ
-21,Electrical Lines/Box,Electrical,Can Stay,Keep,IMG_0021.JPG,4416,1442,Phase 1b,
-22,New Oasis Electrical Box,Electrical,Can Stay,Keep,IMG_0022.JPG,4143,1767,Phase 1b,
-23,Landscape Light,Light,Can Stay,Keep,IMG_0023.JPG,4105,1768,Phase 1b,
-24,Man Gate Call Box,Electrical,Can Stay ,Keep,IMG_0024.JPG,3980,1768,Phase 1b,
-25,Entry Gate,Special Feature,Can Stay,Keep,IMG_0025.JPG,3951,1772,Phase 1b,MQ
-26,Curb Inlet,Utility,Can Stay,Keep,IMG_0026.JPG,4041,1798,Phase 1b,
-27,Curb Inlet,Utility,Can Stay,Keep,IMG_0027.JPG,4142,2013,Phase 3,
-28,Sanitary Manhole,Utility,Can Stay,Keep,IMG_0028.JPG,4074,2007,Phase 3,
-29,Electrical Bollard,Electrical,Must Go,Keep,IMG_0029.JPG,3879,2419,Phase 3,THW
-30,Storm Drain,Utility,Must Go,Remove,IMG_0030.JPG,3825,2093,Phase 3,
-31,Water Valve,Utility,Can Stay,Keep,IMG_0031.JPG,3763,2055,Phase 3,
-32,Telephone Handhole,Electrical,Must Go,Remove,IMG_0032.JPG,3757,2069,Phase 3,
-33,Light Pole,Light,Can Stay,Keep,IMG_0033.JPG,3736,1928,Phase 1b,
-34,Storm Drain,Utility,Can Stay,Not Noted,IMG_0034.JPG,3616,2003,Phase 3,
-35,Light Pole,Light,Can Stay,Keep,IMG_0035.JPG,3416,1936,Phase 1b,
-36,Storm Drain,Utility,Must Go,Remove,IMG_0036.JPG,3390,2098,Phase 3,
-37,Water Valve,Utility,Can Stay,Keep,IMG_0037.JPG,3245,2073,Phase 3,
-38,Curb Intlet,Utility,Can Stay,Keep,IMG_0038.JPG,3200,2044,Phase 3,
-39,Light Pole,Light,Can Stay,Keep,IMG_0039.JPG,3098,1986,Phase 1b,
-40,Curb Inlet,Utility,Can Stay,Keep,IMG_0040.JPG,2857,2081,Phase 3,
-41,Telephone Handhole,Electrical,Must Go,Remove,IMG_0041.JPG,2851,2183,Phase 3,
-42,Electrical Bollard and Pole,Electrical,Must Go,Not Noted,IMG_0042.JPG,2746,2459,Phase 3,THW
-43,Storm Drain,Utlity,Must Go,Remove,IMG_0043.JPG,2810,2108,Phase 3,
-44,Light Pole,Light,Must Go,Remove,IMG_0044.JPG,2824,2018,Phase 1b,
-45,Man Hole,Utility,Can Stay,Keep,IMG_0045.JPG,2772,2037,Phase 3,
-50,Digital Speed Limit Sign,Electrical,Must Go,Remove,IMG_0050.JPG,2776,2016,Phase 1b,MQ
-51,Light Pole,Light,Must Go,Remove,IMG_0051.JPG,2407,2009,Phase 3,MQ
-52,Storm Drain,Utility,Must Go,Remove,IMG_0052.JPG,2462,2046,Phase 3,
-53,Electrical Box,Electrical,Must Go,Not Noted,IMG_0053.JPG,2310,2023,Phase 3,THW
-54,Light Pole,Light,Must Go,Remove,IMG_0054.JPG,2261,2068,Phase 3,
-55,Fire Hydrant and Water Line,Utility,Can Stay,Keep,IMG_0055.JPG,2128,2021,Phase 3,
-56,Storm Inlet ,Utility,Can Stay,Keep,IMG_0056.JPG,2131,1998,Phase 3,
-57,Carson Electrical Box,Electrical,Can Stay,Not Noted,IMG_0057.JPG,1985,1993,Phase 3,
-58,Landscape Light,Light,Must Go,Not Noted,IMG_0058.JPG,2112,1873,Phase 3,
-59,Light Bollard,Light,Can Stay,Keep,IMG_0059.JPG,2087,1848,Phase 3,
-60,Landscape Light,Light,Can Stay,Not Noted,IMG_0060.JPG,2041,1807,Phase 3,
-61,Light Bollard,Light,Can Stay,Not Noted,IMG_0061.JPG,1916,1686,Phase 3,
-62,Landscape Light,Light,Can Stay,Not Noted,IMG_0062.JPG,1883,1654,Phase 3,
-63,Landscape Light & Light Bollard,Light,Can Stay,Not Noted,IMG_0063.JPG,1884,1631,Phase 3,
-64,Light Bollard,Light,Can Stay,Not Noted,IMG_0064.JPG,1941,1855,Phase 3,
-65,Curb Inlet,Utility,Can Stay,Not Noted,IMG_0065.JPG,1857,1730,Phase 3,
-66,Light Bollard,Light,Can Stay,Not Noted,IMG_0066.JPG,1889,1802,Phase 3,
-67,Light Bollard,Light,Can Stay ,Not Noted,IMG_0067.JPG,1788,1704,Phase 3,
-68,Light Bollard,Light,Can Stay ,Not Noted,IMG_0068.JPG,1720,1638,Phase 3,
-69,Light Bollard,Light,Can Stay,Not Noted,IMG_0069.JPG,1674,1588,Phase 3,
-70,Light Bollard,Light,Can Stay,Not Noted,IMG_0070.JPG,1623,1538,Phase 3,
-71,Bench,Site Furnishing,Can Stay,Not Noted,IMG_0071.JPG,1629,1407,Phase 3,MQ
-72,Light Bollard,Light,Can Stay,Not Noted,IMG_0072.JPG,1660,1482,Phase 3,
-73,Light Bollard,Light,Can Stay,Not Noted,IMG_0073.JPG,1692,1450,Phase 3,
-74,Light Bollard,Light,Can Stay,Not Noted,IMG_0074.JPG,1727,1413,Phase 3,
-75,Light Bollard,Light,Can Stay,Not Noted,IMG_0075.JPG,1758,1383,Phase 3,
-76,Bench,Site Furnishing,Can Stay,Not Noted,IMG_0076.JPG,1743,1355,Phase 3,MQ
-77,Water Cleanout,Utility,Can Stay,Not Noted,IMG_0077.JPG,1718,1377,Phase 3,
-78,Light Bollard,Light,Can Stay,Not Noted,IMG_0078.JPG,1816,1347,Phase 3,
-79,Water Cap,Utility,Can Stay,Not Noted,IMG_0079.JPG,1837,1357,Phase 3,
-80,Engraved Pavers,Special Feature,Can Stay,Not Noted,IMG_0080.JPG,1894,1439,Phase 1b,MQ
-81,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0081.JPG,1905,1421,Phase 1b,MQ
-82,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0082.JPG,1956,1370,Phase 1b,MQ
-83,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0083.JPG,1969,1353,Phase 1b,MQ
-84,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0084.JPG,1982,1342,Phase 1b,MQ
-85,Water Cleanout,Utility,Can Stay,Not Noted,IMG_0085.JPG,1977,1302,Phase 1b,
-86,Water Cleanout,Utility,Can Stay,Not Noted,IMG_0086.JPG,2018,1358,Phase 1b,
-87,Flagpoles,Site Furnishing,Can Stay,Not Noted,IMG_0087.JPG,1931,1393,Phase 1b,
-88,Light Bollard,Light,Must Go,Keep,IMG_0088.JPG,1967,1492,Phase 1b,
-89,Curb Inlet,Utility,Can Stay,Keep,IMG_0089.JPG,2005,1575,Phase 1b,
-90,Water Cleanout,Utility,Must Go,Remove,IMG_0090.JPG,2052,1535,Phase 1b,
-91,Light Bollard,Light,Must Go,Keep,IMG_0091.JPG,2040,1570,Phase 1b,
-92,Light Bollard,Light,Must Go,Keep,IMG_0092.JPG,2102,1633,Phase 1b,
-93,Lanscape Light ,Light,Must Go,Remove,IMG_0093.JPG,2139,1608,Phase 1b,
-94,Light Bollard,Light,Must Go,Keep,IMG_0094.JPG,2156,1690,Phase 1b,
-95,Light Bollard,Light,Must Go,Keep,IMG_0095.JPG,2216,1749,Phase 1b,
-96,Light Bollard,Light,Must Go,Remove,IMG_0096.JPG,2286,1814,Phase 1b,
-97,Carson Irrigation Control Valve,Electrical,Must Go,Remove,IMG_0097.JPG,2263,1762,Phase 1b,
-98,Curb Inlet,Utility,Must Go,Remove,IMG_0098.JPG,2305,1856,Phase 1b,V
-99,Light Bollard ,Light,Must Go,Remove,IMG_0099.JPG,2364,1747,Phase 1b,
-100,Water Cleanout,Utility,Must Go,Remove,IMG_0100.JPG,2233,1635,Phase 1b,
-101,Landscape Light,Light,Must Go,Remove,IMG_0101.JPG,2296,1591,Phase 1b,
-102,Water Cleanout,Utility,Must Go,Remove,IMG_0102.JPG,2317,1568,Phase 1b,
-103,Light Bollard ,Light,Must Go,Remove,IMG_0103.JPG,2414,1727,Phase 1b,
-104,Light Bollard,Light,Must Go,Remove,IMG_0104.JPG,2460,1795,Phase 1b,
-105,Light Bollard ,Light,Must Go,Remove,IMG_0105.JPG,2569,1825,Phase 1b,
-106,Light Bollard,Light,Must Go,Remove,IMG_0106.JPG,2673,1830,Phase 1b,
-107,Light Bollard,Light,Must Go,Remove,IMG_0107.JPG,2729,1849,Phase 1b,
-108,Light Bollard,Light,Must Go,Remove,IMG_0108.JPG,2787,1842,Phase 1b,
-109,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0109.JPG,2818,1843,Phase 1b,MQ
-110,Light Bollard,Light,Must Go,Remove,IMG_0110.JPG,2841,1848,Phase 1b,
-111,Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0111.JPG,2852,1807,Phase 1b,V
-112,Light Bollard,Light,Must Go,Remove,IMG_0112.JPG,2914,1860,Phase 1b,MQ
-113,Light Bollard,Light,Must Go,Remove,IMG_0113.JPG,3020,1870,Phase 1b,MQ
-114,Light Bollard,Light,Must Go,Remove,IMG_0114.JPG,3106,1854,Phase 1b,MQ
-115,Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0115.JPG,3115,1805,Phase 1b,V
-116,Light Bollard,Light,Must Go,Remove,IMG_0116.JPG,3177,1834,Phase 1b,MQ
-117,Light Bollard,Light,Must Go,Remove,IMG_0117.JPG,3285,1827,Phase 1b,MQ
-118,Light Bollard,Light,Must Go,Remove,IMG_0118.JPG,3408,1844,Phase 1b,MQ
-119,Marquette Rock - Waterfall .25 Mile,Special Feature,Must Go,Not Noted,IMG_0119.JPG,3489,1764,Phase 1b,MQ
-120,Directional Signage,Special Feature,Must Go,Not Noted,IMG_0120.JPG,3506,1832,Phase 1b,MQ
-121,Bench,Site Furnishing,Must Go,Remove,IMG_0121.JPG,3554,1767,Phase 1b,MQ
-122,Waterfall Feature,Special Feature,Must Go,Remove,IMG_0122.JPG,3505,1698,Phase 1b,MQ
-123,Storm inlet,Utility,Can Stay,Keep,IMG_0123.JPG,3624,1820,Phase 1b,
-124,Carson ICV Irrigation Valve,Utility,Must Go,Not Noted,IMG_0124.JPG,3685,1741,Phase 1b,V
-125,ICV Rainbird Irrigation,Utility,Must Go,Not Noted,IMG_0125.JPG,3740,1723,Phase 1b,V
-126,Storm Inlet,Utility,Must Go,Remove,IMG_0126.JPG,3767,1816,Phase 1b,
-127,Speed limit sign,Special Feature,Can Stay,Keep,IMG_0127.JPG,3807,1793,Phase 1b,
-128,Storm Outlet,Utility,Must Go,Remove,IMG_0128.JPG,3802,1698,Phase 1b,
-129,Storm Inlet,Utility,Must Go,Remove,IMG_0129.JPG,3693,1877,Phase 1b,
-130,Landscape Light,Light,Must Go,Not Noted,IMG_0130.JPG,3579,1706,Phase 1b,V
-131,Lanscape Light ,Light,Must Go,Not Noted,IMG_0131.JPG,3573,1711,Phase 1b,V
-132,Landscape Light,Light,Must Go,Remove,IMG_0132.JPG,3517,1720,Phase 1b,
-133,Bridge Plaque,Special Feature,Must Go,Remove,IMG_0133.JPG,3429,1692,Phase 1b,MQ
-134,Light Bollard,Light,Must Go,Remove,IMG_0134.JPG,3461,1678,Phase 1b,MQ
-135,Light Bollard,Light,Must Go,Remove,IMG_0135.JPG,3403,1611,Phase 2,MQ
-136,Light Bollard,Light,Must Go,Remove,IMG_0136.JPG,3301,1545,Phase 2,
-137,Light Bollard,Light,Must Go,Remove,IMG_0137.JPG,3237,1480,Phase 2,
-138,Light Bollard ,Light,Must Go,Remove,IMG_0138.JPG,3210,1428,Phase 2,
-139,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0139.JPG,3208,1391,Phase 2,MQ
-140,Light Bollard,Light,Must Go,Remove,IMG_0140.JPG,3190,1353,Phase 2,
-141,Doggy Station/Light Bollard,Light/Site Furnishing,Must Go,Relocate,IMG_0141.JPG,3183,1327,Phase 2,V
-142,Light Bollard,Light,Must Go,Remove,IMG_0142.JPG,3044,1205,Phase 2,
-143,Light Bollard,Light,Must Go,Remove,IMG_0143.JPG,2977,1184,Phase 2,
-144,Sidwalk Plaque - Bernice Davey,Special Feature,Must Go,Not Noted,IMG_0144.JPG,2938,1176,Phase 2,MQ
-145,Light Bollard ,Light,Must Go,Remove,IMG_0145.JPG,2917,1175,Phase 2,
-146,Light Bollard,Light ,Must Go,Remove,IMG_0146.JPG,2818,1166,Phase 2,
-147,Light Bollard,Light,Must Go,Remove,IMG_0147.JPG,2729,1168,Phase 2,
-148,Light Bollard,Light,Must Go,Remove,IMG_0148.JPG,2663,1192,Phase 1b,
-149,Carson Irrigation Control Valve,Utility,Must Go,Remove,IMG_0149.JPG,2386,1575,Phase 1b,V
-150,Landscape Light,Light,Must Go,Remove,IMG_0150.JPG,2395,1513,Phase 1b,
-151,Irrigation Control Valve,Utility,Must Go,Remove,IMG_0151.JPG,2434,1464,Phase 1b,V
-152,Light Bollard,Light,Must Go,Remove,IMG_0152.JPG,2460,1471,Phase 1b,
-153,Light Bollard,Light,Must Go,Remove,IMG_0153.JPG,2473,1396,Phase 1b,
-154,Light Bollard,Light ,Must Go,Remove,IMG_0154.JPG,2518,1325,Phase 1b,
-155,Light Pole,Light,Can Stay,Keep,IMG_0155.JPG,2450,1291,Phase 1b,
-156,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0156.JPG,2585,1337,Phase 1b,MQ
-157,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0157.JPG,2599,1315,Phase 1b,MQ
-158,Electrical Box,Electrical,Must Go,Remove,IMG_0158.JPG,2545,1346,Phase 1b,
-159,PVC Out of Retaining Wall,Utility,Must Go,Not Noted,IMG_0159.JPG,2620,1339,Phase 1b,
-160,Exterior Outlet,Electrical,Must Go,Not Noted,IMG_0160.JPG,2572,1326,Phase 1b,
-161,Light Bollard - In Bush,Light,Must Go,Remove,IMG_0161.JPG,2602,1238,Phase 1b,
-162,Existing Gazebo Pad,Site Furnishing,Can Stay,Keep,IMG_0162.JPG,2662,1135,Phase 2,
-163,Existing Gazebo Pad,Site Furnishing,Can Stay,Keep,IMG_0163.JPG,2583,1212,Phase 1b,
-164,Light Pole,Light,Can Stay,Keep,IMG_0164.JPG,2577,1169,Phase 1b,
-165,Outlet and Ground Light,Electrical/Light,Can Stay,Keep,IMG_0165.JPG,2553,1214,Phase 1b,
-166,Existing Gazebo Pad/Ground Light,Site Furnishing/Light,Can Stay,Keep,IMG_0166.JPG,2495,1302,Phase 1b,
-167,Light Pole,Light,Can Stay,Keep,IMG_0167.JPG,2661,1082,Phase 2,
-168,Bench with Plaque (x2),Site Furnishing ,Can Stay,Not Noted,IMG_0168.JPG,2586,1056,Phase 1b,MQ
-169,Water Feature ,Special Feature,Can Stay,Keep,IMG_0169.JPG,2613,1025,Phase 1b,MQ
-170,Light Pole,Light,Can Stay,Keep,IMG_0170.JPG,2565,982,Phase 2,
-171,Bench with Plaque,Site Furnishing,Can Stay,Not Noted,IMG_0171.JPG,2540,1005,Phase 2,MQ
-172,Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0172.JPG,2551,958,Phase 2,V
-173,Light Pole,Light,Can Stay,Keep,IMG_0173.JPG,2478,1068,Phase 2,
-174,Bench with Plaque,Site Furnishing,Can Stay,Keep,IMG_0174.JPG,2459,1063,Phase 2,MQ
-175,Bench with Plaque,Site Furnishing,Can Stay,Keep,IMG_0175.JPG,2436,1089,Phase 2,MQ
-176,Light Pole,Light,Can Stay,Keep,IMG_0176.JPG,2341,1195,Phase 1b,
-177,Bench with Plaque,Site Furnishing,Can Stay,Not Noted,IMG_0177.JPG,2350,1177,Phase 1b,MQ
-178,Bench with Plaque (x2),Site Furnishing,Can Stay,Not Noted,IMG_0178.JPG,2404,1245,Phase 1b,MQ
-179,Storm Drain,Utility,Can Stay,Not Noted,IMG_0179.JPG,2333,1168,Phase 1b,
-180,Sprinkler Control Valve,Electrical,Can Stay,Keep,IMG_0180.JPG,2664,1059,Phase 2,
-181,Utility Vault,Utility,Can Stay,Keep,IMG_0181.JPG,2640,1000,Phase 1a,THW
-182,Storm Drain,Utility,Can Stay,Keep,IMG_0182.JPG,2657,989,Phase 2,
-183,Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0183.JPG,2629,1016,Phase 2,V
-184,Electrical Box,Electrical,Can Stay,Not Noted,IMG_0184.JPG,2708,1026,Phase 2,
-185,Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0185.JPG,2741,1042,Phase 2,V
-186,West Detention Pond Water Feature,Utility,Must Go,Not Noted,IMG_0186.JPG,2866,1543,Phase 1a,
-187,West Pond Storm Inlet,Utility,Must Go,Remove,IMG_0187.JPG,3102,1164,Phase 2,
-188,Irrigation Control Valve,Utility ,Must Go,Remove,IMG_0188.JPG,3086,1067,Phase 2,V
-189,Irrigation Control Valve,Utility,Must Go ,Remove,IMG_0189.JPG,3104,1054,Phase 2,V
-190,Irrigation Control Valve,Utility,Must Go,Remove,IMG_0190.JPG,3239,905,Phase 2,V
-191,Rainbird Irrigation Lid,Utility,Must Go,Remove,IMG_0191.JPG,3329,826,Phase 2,V
-192,Carson Irrigation Lid,Utility,Must Go,Remove,IMG_0192.JPG,3374,777,Phase 2,V
-193,Carson Irrigation Lid,Utility,Must Go,Keep,IMG_0193.JPG,3531,659,Phase 2,V
-194,Rainbird Irrigation Lid,Utility,Must Go,Keep,IMG_0194.JPG,3553,650,Phase 2,V
-195,Stormwater Pump Station,Utility,Can Stay,Keep,IMG_0195.JPG,3485,472,Phase 2,
-196,Rainbird Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0196.JPG,3631,445,Phase 2,V
-197,Rainbird Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0197.JPG,3566,221,Phase 2,V
-198,Fire Hydrant/Fire Department Connection,Utility,Can Stay,Keep,IMG_0198.JPG,3489,95,Phase 1a,
-199,Rainbird Irrigation Lid,Utility,Must Go,Not Noted,IMG_0199.JPG,3521,124,Phase 1a,V
-200,Rainbird Irrigation Lid,Utility,Must Go,Not Noted,IMG_0200.JPG,3582,135,Phase 1a,V
-201,Light Pole,Light,Can Stay,Keep,IMG_0201.JPG,3568,68,Phase 2,
-202,Storm Drain,Utility,Must Go,Remove,IMG_0202.JPG,3767,160,Phase 2,
-203,Man Hole ,Utility,Can Stay,Keep,IMG_0203.JPG,3789,221,Phase 2,V
-204,Light Pole,Light,Can Stay,Keep,IMG_0204.JPG,3870,90,Phase 1a,
-205,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0205.JPG,3852,111,Phase 1a,MQ
-206,New Oasis Electrical Box,Electrical,Can Stay,Keep,IMG_0206.JPG,4028,97,Phase 1a,
-207,North Entrance Call Box,Electrical,Can Stay,Keep,IMG_0207.JPG,4128,123,Phase 2,
-208,North Entry Security Pole,Electrical,Can Stay,Keep,IMG_0208.JPG,3964,28,Phase 1a,V
-209,Light Pole,Electrical ,Can Stay,Keep,IMG_0209.JPG,4135,101,Phase 1a,
-210,North Exit Arm Gate,Electrical ,Can Stay,Keep,IMG_0210.JPG,4159,38,Phase 1a,V
-211,North Entrance Arm Gate,Electrical ,Can Stay,Keep,IMG_0211.JPG,3974,18,Phase 1a,V
-212,Rainbird Irrigation Lid,Utility,Must Go,Remove,IMG_0212.JPG,4193,196,Phase 1a,V
-213,Sprinkler Box,Electric,Must Go,Remove,IMG_0213.JPG,4061,154,Phase 1a,V
-214,Rainbird Irrigation Lid,Utility,Must Go,Remove,IMG_0214.JPG,4027,192,Phase 1a,V
-215,Storm Drain,Utility,Must Go,Remove,IMG_0215.JPG,4082,376,Phase 1a,
-216,Storm Drain,Utility,Must Go,Remove,IMG_0216.JPG,4249,404,Phase 1a,
-217,Storm Drain,Utility,Can Stay,Keep,IMG_0217.JPG,4263,634,Phase 1a,SP
-218,Electrical Box,Electrical,Must Go,Not Noted,IMG_0218.JPG,4225,757,Phase 2,V
-219,Gas Line Flag,Utility,Must Go,Not Noted,IMG_0219.JPG,4179,645,Phase 1a,V
-220,Man Hole,Utility,Must Go,Remove,IMG_0220.JPG,4242,1061,Phase 2,
-221,Storm Outlet Into East Pond,Utility,Must Go,Remove,IMG_0221.JPG,4203,1120,Phase 2,
-222,Exterior Outlet,Electrical ,Can Stay,Keep,IMG_0222.JPG,4292,1306,Phase 2,
-223,Guardian Private Utility Locate Flag,Utility,Must Go,Not Noted,IMG_0223.JPG,3849,959,Phase 2,V
-224,Irrigation Control Valve,Electrical,Must Go,Remove,IMG_0224.JPG,3800,1536,Phase 2,
-225,Utility Vault,Utility,Must Go,Remove,IMG_0225.JPG,3758,1538,Phase 1a,THW
-226,Red Guardian Private Utility Locate Flag,Utility,Must Go,Not Noted,IMG_0226.JPG,3685,1532,Phase 1a,V
-227,Electrical Box,Electrical,Must Go,Not Noted,IMG_0227.JPG,3636,1569,Phase 2,V
-228,Landscape Light,Electrical,Must Go,Remove,IMG_0228.JPG,3574,1581,Phase 2,
-229,Lanscape Light,Electrical,Must Go,Remove,IMG_0229.JPG,3503,1576,Phase 2,
-230,Landscape Light,Electrical ,Must Go,Remove,IMG_0230.JPG,3403,1570,Phase 2,
-231,Red Guardian Private Utility Locate Flag,Utility,Must Go,Not Noted,IMG_0231.JPG,3308,1451,Phase 1a,V
-232,Irrigation Control Box and Valve,Utility,Must Go,Remove,IMG_0232.JPG,3208,1334,Phase 2,V
-233,West Pond PVC Storm Inlet,Utility,Must Go,Remove,IMG_0233.JPG,2889,1287,Phase 2,
-234,Rock Swale,Utillity,Must Go,Remove,IMG_0234.JPG,3017,1282,Phase 2,
-235,Water Feature Drainage Grate,Utillity,Must Go,Not Noted,IMG_0235.JPG,3381,1728,Phase 1a,SP
-236,Rainbird Irrigation Lid,Utility,Can Stay,Keep,IMG_0236.JPG,3998,1730,Phase 2,V
-237,Electrical Outlet Post and Electrical Box,Electrical,Can Stay,Keep,IMG_0237.JPG,4090,1717,Phase 2,
-238,Storm PVC Pipe East Pond Inlet,Utility,Can Stay,Keep,IMG_0238.JPG,4151,1678,Phase 1a,
-239,Pink Mason Private Locate,Utility,Must Go,Not Noted,IMG_0239.JPG,4218,1694,Phase 1a,V
-240,Fake Rock,Special Feature,Can Stay,Keep,IMG_0240.JPG,4165,1743,Phase 2,MQ
-241,Rainbird Irrigation Control Valve,Utillity,Can Stay,Keep,IMG_0241.JPG,4323,1060,Phase 2,V
-242,Electrical Pedistal ,Electrical ,Can Stay,Keep,IMG_0242.JPG,4429,1068,Phase 1a,
-243,Man Hole,Utility,Can Stay,Keep,IMG_0243.JPG,4453,1045,Phase 2,
-244,Man Hole,Utility,Can Stay,Keep,IMG_0244.JPG,4446,1008,Phase 2,
-245,Fiber Optic Pedistal and MCI Electrical Box,Electrical ,Can Stay,Keep,IMG_0245.JPG,4417,922,Phase 2,
-246,Rainbird Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0246.JPG,4335,651,Phase 2,V
-247,Man Hole,Utility,Can Stay,Keep,IMG_0247.JPG,4339,465,Phase 2,
-248,Carson Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0248.JPG,4331,392,Phase 2,V
-249,Storm Inlets,Utility,Can Stay,Keep,IMG_0249.JPG,4400,329,Phase 2,
-250,Man Hole,Utility,Can Stay,Keep,IMG_0250.JPG,4379,238,Phase 2,
-251,Electrial Pedistal,Electrical,Can Stay,Keep,IMG_0251.JPG,4392,174,Phase 2,
-252,Water Valve,Utility,Can Stay,Keep,IMG_0252.JPG,4350,227,Phase 2,
-253,Sanitary Manhole,Utility,Can Stay,Keep,253.JPG,4334,1945,Phase 1a,
-254,Electrical Box,Electrical,Can Stay,Keep,254.JPG,3961,1952,Phase 1a,
-255,Electrical Handhole,Electrical,Can Stay,Keep,255.JPG,3951,1933,Phase 1a,
-256,Sprinkler Control Valve,Utility,Can Stay,Keep,256.JPG,3919,1910,Phase 1a,
-257,Sanitary Manhole,Utility,Can Stay,Keep,257.JPG,3849,1966,Phase 1a,
-258,Sprinkler Control Valve,Utility,Can Stay,Keep,258.JPG,3930,1758,Phase 1a,
-259,Electrical Handhole,Electrical,Must Go,Keep,259.JPG,3773,1931,Phase 1a,
-260,Storm Drain,Utility,Must Go,Keep,260.JPG,3617,1931,Phase 1a,
-261,Curb Inlet,Utility,Must Go,Keep,261.JPG,3192,1899,Phase 1a,
-262,Curb Inlet,Utility,Must Go,Keep,262.JPG,3861,1940,Phase 1a,
-263,Electrical Handhole,Electrical,Must Go,Keep,263.JPG,2158,1883,Phase 1b,
-264,Sprinkler Control Valve,Utility,Must Go,Keep,264.JPG,2132,1905,Phase 1b,
-265,Light Bollard,Electrical,Can Stay,Not Noted,265.JPG,1802,1524,Phase 1b,
-266,Water Cleanout,Utility,Must Go,Remove,266.JPG,2323,1550,Phase 1b,
-267,Storm Drain,Utility,Can Stay,Keep,267.JPG,3948,14,Phase 1a,
-268,Storm Drain,Utility,Can Stay,Keep,268.JPG,3502,419,Phase 1a,
-269,Sprinkler Control Valve,Utility,Must Go,Remove,269.JPG,4216,2256,Phase 3,
-270,Gas Meter,Utility,Must Go,Remove,270.JPG,4175,2271,Phase 3,
-271,Electric Meter Box,Electrical,Must Go,Remove,271.JPG,4118,2273,Phase 3,
-272,Sprinkler Control Valve,Utility,Must Go,Remove,272.JPG,4092,2308,Phase 3,
-273,Fence,Site Furnishing,Must Go,Remove,273.JPG,4041,2312,Phase 3,
-274,AC Unit,Utility,Must Go,Remove,274.JPG,3960,2269,Phase 3,
-275,Mail Box,Site Furnishing,Must Go,Remove,275.JPG,3805,2066,Phase 3,
-276,Fence,Site Furnishing,Must Go,Remove,276.JPG,3748,2333,Phase 3,
-277,Gas Meter ,Utillity,Must Go,Remove,277.JPG,3745,2338,Phase 3,
-278,AC Unit,Utillity,Must Go,Remove,278.JPG,3593,2342,Phase 3,
-279,Electric Meter Box,Electrical,Must Go,Remove,279.JPG,3559,2345,Phase 3,
-280,Fence,Site Furnishing,Must Go,Remove,280.JPG,3563,2369,Phase 3,
-281,Cleanout,Utility,Must Go,Remove,281.JPG,3606,2169,Phase 3,
-282,Mail Box,Site Furnishing,Must Go,Remove,282.JPG,3449,2065,Phase 3,
-283,AC Unit,Utillity,Must Go,Remove,283.PDF,3532,2352,Phase 3,
-284,Sprinkler Control Valve,Utillity,Must Go,Keep,284.PDF,3392,2416,Phase 3,
-285,Sprinkler Control Valve,Utillity,Must Go,Keep,285.JPG,3278,2441,Phase 3,
-286,Storm Drain,Utillity,Must Go,Remove,286.JPG,2389,2346,Phase 3,
-287,Cable Box,Utillity,Must Go,Not Noted,287.JPG,3171,2394,Phase 3,
-288,AC Unit,Utillity,Must Go,Not Noted,288.JPG,3046,2377,Phase 3,
-289,Fence,Site Furnishing,Must Go,Remove,289.JPG,3013,2399,Phase 3,
-290,Electrical Meter Box,Electrical,Must Go,Remove,290.JPG,3013,2375,Phase 3,
-291,AC Unit,Utility,Must Go,Remove,291.JPG,2971,2374,Phase 3,
-292,Sprinkler Valve,Utility,Must Go,Not Noted,292.JPG,2703,2450,Phase 3,V
-293,Sprinkler Control Valve,Utility,Must Go,Keep,293.JPG,2735,2449,Phase 3,
-294,Fence,Site Furnishing,Must Go,Remove,294.JPG,2488,2415,Phase 3,
-295,Stop Sign,Site Furnishing,Must Go,Remove,295.JPG,2219,2115,Phase 3,
-296,Mail Box,Site Furnishing,Must Go,Remove,296.JPG,2512,2097,Phase 3,
-297,Mail Box,Site Furnishing,Must Go,Remove,297.JPG,2970,2137,Phase 3,
-298,Water Valve,Utility,Must Go,Remove,298.JPG,3057,2183,Phase 3,
-299,Storm Drain,Utility,Must Go,Remove,299.JPG,2802,2120,Phase 3,
-300,Storm Drain,Utility,Must Go,Remove,300.JPG,2750,2344,Phase 3,
-301,Sprinkler Control Valve,Utility,Must Go,Remove,301.JPG,4010,184,Phase 2,
-302,Electrical Handhole,Electrical,Must Go,Not Noted,302.JPG,2384,1572,Phase 1b,V
-303,Gas Meter,Utility,Must Go,Remove,303.JPG,3406,2385,Phase 3,
-304,Storm Drain,Utility,Must Go,Remove,304.JPG,3389,2099,Phase 3,
+1,Electrical Box,Electrical,Can Stay,Keep,IMG_0001.jpg,4434,2143,phase 3,
+2,Storm Outlet,Electrical/Utility,Can Stay,Keep,IMG_0002.jpg,4388,2115,phase 3,
+3,Irrigation Water Ground Outlet,Utility,Can Stay,Keep,IMG_0003.jpg,4408,2045,phase 3,V
+4,Water Meters/Storm Outlet,Utility,Can Stay,Keep,IMG_0004.jpg,4384,2042,phase 3,
+5,Electrical Box,Electrical,Can Stay,Keep,IMG_0005.jpg,4382,2092,phase 3,
+6,Ford Meter Box,Utility,Can Stay,Keep,IMG_0006.JPG,4335,2080,phase 3,
+7,Electrical Panels - Guard Shack,Electrical,Can Stay,Keep,IMG_0007.JPG,4291,2149,phase 3,THW
+8,Fire hydrant,Utility,Can Stay,Keep,IMG_0008.JPG,4313,2114,phase 3,
+9,Landscape Light,Light,Can Stay,Keep,IMG_0009.JPG,4297,2083,phase 3,
+10,Landscape Light,Light,Can Stay,Keep,IMG_0010.JPG,4270,2069,phase 3,
+11,Landscape Light,Light,Can Stay,Keep,IMG_0011.JPG,4255,2053,phase 3,
+12,Light Pole,Light,Can Stay,Keep,IMG_0012.JPG,4201,2026,phase 3,
+13,Light Pole,Light,Can Stay,Keep,IMG_0013.JPG,4204,1921,phase 1b,
+14,Light Pole,Light,Can Stay,Keep,IMG_0014.JPG,4212,1795,phase 1b,
+15,Landscape Light,Light,Can Stay,Keep,IMG_0015.JPG,4247,1747,phase 1b,
+16,Lanscape Light,Light,Can Stay,Keep,IMG_0016.JPG,4260,1723,phase 1b,
+17,Landscape Light,Light,Can Stay,Keep,IMG_0017.JPG,4283,1703,phase 1b,
+18,Concrete Swale,Utility,Can Stay,Keep,IMG_0018.JPG,4386,1704,phase 1b,
+19,Irrigation Rain Bird,Utility,Can Stay,Keep,IMG_0019.JPG,4324,1649,phase 1b,V
+20,Marquette Rock,Special Feature,Can Stay,Keep,IMG_0020.JPG,4331,1541,phase 1b,MQ
+21,Electrical Lines/Box,Electrical,Can Stay,Keep,IMG_0021.JPG,4416,1442,phase 1b,
+22,New Oasis Electrical Box,Electrical,Can Stay,Keep,IMG_0022.JPG,4143,1767,phase 1b,
+23,Landscape Light,Light,Can Stay,Keep,IMG_0023.JPG,4105,1768,phase 1b,
+24,Man Gate Call Box,Electrical,Can Stay,Keep,IMG_0024.JPG,3980,1768,phase 1b,
+25,Entry Gate,Special Feature,Can Stay,Keep,IMG_0025.JPG,3951,1772,phase 1b,MQ
+26,Curb Inlet,Utility,Can Stay,Keep,IMG_0026.JPG,4041,1798,phase 1b,
+27,Curb Inlet,Utility,Can Stay,Keep,IMG_0027.JPG,4142,2013,phase 3,
+28,Sanitary Manhole,Utility,Can Stay,Keep,IMG_0028.JPG,4074,2007,phase 3,
+29,Electrical Bollard,Electrical,Must Go,Keep,IMG_0029.JPG,3879,2419,phase 3,THW
+30,Storm Drain,Utility,Must Go,Remove,IMG_0030.JPG,3825,2093,phase 3,
+31,Water Valve,Utility,Can Stay,Keep,IMG_0031.JPG,3763,2055,phase 3,
+32,Telephone Handhole,Electrical,Must Go,Remove,IMG_0032.JPG,3757,2069,phase 3,
+33,Light Pole,Light,Can Stay,Keep,IMG_0033.JPG,3736,1928,phase 1b,
+34,Storm Drain,Utility,Can Stay,Not Noted,IMG_0034.JPG,3616,2003,phase 3,
+35,Light Pole,Light,Can Stay,Keep,IMG_0035.JPG,3416,1936,phase 1b,
+36,Storm Drain,Utility,Must Go,Remove,IMG_0036.JPG,3390,2098,phase 3,
+37,Water Valve,Utility,Can Stay,Keep,IMG_0037.JPG,3245,2073,phase 3,
+38,Curb Intlet,Utility,Can Stay,Keep,IMG_0038.JPG,3200,2044,phase 3,
+39,Light Pole,Light,Can Stay,Keep,IMG_0039.JPG,3098,1986,phase 1b,
+40,Curb Inlet,Utility,Can Stay,Keep,IMG_0040.JPG,2857,2081,phase 3,
+41,Telephone Handhole,Electrical,Must Go,Remove,IMG_0041.JPG,2851,2183,phase 3,
+42,Electrical Bollard and Pole,Electrical,Must Go,Not Noted,IMG_0042.JPG,2746,2459,phase 3,THW
+43,Storm Drain,Utlity,Must Go,Remove,IMG_0043.JPG,2810,2108,phase 3,
+44,Light Pole,Light,Must Go,Remove,IMG_0044.JPG,2824,2018,phase 1b,
+45,Man Hole,Utility,Can Stay,Keep,IMG_0045.JPG,2772,2037,phase 3,
+50,Digital Speed Limit Sign,Electrical,Must Go,Remove,IMG_0050.JPG,2776,2016,phase 1b,MQ
+51,Light Pole,Light,Must Go,Remove,IMG_0051.JPG,2407,2009,phase 3,MQ
+52,Storm Drain,Utility,Must Go,Remove,IMG_0052.JPG,2462,2046,phase 3,
+53,Electrical Box,Electrical,Must Go,Not Noted,IMG_0053.JPG,2310,2023,phase 3,THW
+54,Light Pole,Light,Must Go,Remove,IMG_0054.JPG,2261,2068,phase 3,
+55,Fire Hydrant and Water Line,Utility,Can Stay,Keep,IMG_0055.JPG,2128,2021,phase 3,
+56,Storm Inlet,Utility,Can Stay,Keep,IMG_0056.JPG,2131,1998,phase 3,
+57,Carson Electrical Box,Electrical,Can Stay,Not Noted,IMG_0057.JPG,1985,1993,phase 3,
+58,Landscape Light,Light,Must Go,Not Noted,IMG_0058.JPG,2112,1873,phase 3,
+59,Light Bollard,Light,Can Stay,Keep,IMG_0059.JPG,2087,1848,phase 3,
+60,Landscape Light,Light,Can Stay,Not Noted,IMG_0060.JPG,2041,1807,phase 3,
+61,Light Bollard,Light,Can Stay,Not Noted,IMG_0061.JPG,1916,1686,phase 3,
+62,Landscape Light,Light,Can Stay,Not Noted,IMG_0062.JPG,1883,1654,phase 3,
+63,Landscape Light & Light Bollard,Light,Can Stay,Not Noted,IMG_0063.JPG,1884,1631,phase 3,
+64,Light Bollard,Light,Can Stay,Not Noted,IMG_0064.JPG,1941,1855,phase 3,
+65,Curb Inlet,Utility,Can Stay,Not Noted,IMG_0065.JPG,1857,1730,phase 3,
+66,Light Bollard,Light,Can Stay,Not Noted,IMG_0066.JPG,1889,1802,phase 3,
+67,Light Bollard,Light,Can Stay,Not Noted,IMG_0067.JPG,1788,1704,phase 3,
+68,Light Bollard,Light,Can Stay,Not Noted,IMG_0068.JPG,1720,1638,phase 3,
+69,Light Bollard,Light,Can Stay,Not Noted,IMG_0069.JPG,1674,1588,phase 3,
+70,Light Bollard,Light,Can Stay,Not Noted,IMG_0070.JPG,1623,1538,phase 3,
+71,Bench,Site Furnishing,Can Stay,Not Noted,IMG_0071.JPG,1629,1407,phase 3,MQ
+72,Light Bollard,Light,Can Stay,Not Noted,IMG_0072.JPG,1660,1482,phase 3,
+73,Light Bollard,Light,Can Stay,Not Noted,IMG_0073.JPG,1692,1450,phase 3,
+74,Light Bollard,Light,Can Stay,Not Noted,IMG_0074.JPG,1727,1413,phase 3,
+75,Light Bollard,Light,Can Stay,Not Noted,IMG_0075.JPG,1758,1383,phase 3,
+76,Bench,Site Furnishing,Can Stay,Not Noted,IMG_0076.JPG,1743,1355,phase 3,MQ
+77,Water Cleanout,Utility,Can Stay,Not Noted,IMG_0077.JPG,1718,1377,phase 3,
+78,Light Bollard,Light,Can Stay,Not Noted,IMG_0078.JPG,1816,1347,phase 3,
+79,Water Cap,Utility,Can Stay,Not Noted,IMG_0079.JPG,1837,1357,phase 3,
+80,Engraved Pavers,Special Feature,Can Stay,Not Noted,IMG_0080.JPG,1894,1439,phase 1b,MQ
+81,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0081.JPG,1905,1421,phase 1b,MQ
+82,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0082.JPG,1956,1370,phase 1b,MQ
+83,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0083.JPG,1969,1353,phase 1b,MQ
+84,Bench With Plaque,Site Furnishing,Must Go,Not Noted,IMG_0084.JPG,1982,1342,phase 1b,MQ
+85,Water Cleanout,Utility,Can Stay,Not Noted,IMG_0085.JPG,1977,1302,phase 1b,
+86,Water Cleanout,Utility,Can Stay,Not Noted,IMG_0086.JPG,2018,1358,phase 1b,
+87,Flagpoles,Site Furnishing,Can Stay,Not Noted,IMG_0087.JPG,1931,1393,phase 1b,
+88,Light Bollard,Light,Must Go,Keep,IMG_0088.JPG,1967,1492,phase 1b,
+89,Curb Inlet,Utility,Can Stay,Keep,IMG_0089.JPG,2005,1575,phase 1b,
+90,Water Cleanout,Utility,Must Go,Remove,IMG_0090.JPG,2052,1535,phase 1b,
+91,Light Bollard,Light,Must Go,Keep,IMG_0091.JPG,2040,1570,phase 1b,
+92,Light Bollard,Light,Must Go,Keep,IMG_0092.JPG,2102,1633,phase 1b,
+93,Lanscape Light,Light,Must Go,Remove,IMG_0093.JPG,2139,1608,phase 1b,
+94,Light Bollard,Light,Must Go,Keep,IMG_0094.JPG,2156,1690,phase 1b,
+95,Light Bollard,Light,Must Go,Keep,IMG_0095.JPG,2216,1749,phase 1b,
+96,Light Bollard,Light,Must Go,Remove,IMG_0096.JPG,2286,1814,phase 1b,
+97,Carson Irrigation Control Valve,Electrical,Must Go,Remove,IMG_0097.JPG,2263,1762,phase 1b,
+98,Curb Inlet,Utility,Must Go,Remove,IMG_0098.JPG,2305,1856,phase 1b,V
+99,Light Bollard,Light,Must Go,Remove,IMG_0099.JPG,2364,1747,phase 1b,
+100,Water Cleanout,Utility,Must Go,Remove,IMG_0100.JPG,2233,1635,phase 1b,
+101,Landscape Light,Light,Must Go,Remove,IMG_0101.JPG,2296,1591,phase 1b,
+102,Water Cleanout,Utility,Must Go,Remove,IMG_0102.JPG,2317,1568,phase 1b,
+103,Light Bollard,Light,Must Go,Remove,IMG_0103.JPG,2414,1727,phase 1b,
+104,Light Bollard,Light,Must Go,Remove,IMG_0104.JPG,2460,1795,phase 1b,
+105,Light Bollard,Light,Must Go,Remove,IMG_0105.JPG,2569,1825,phase 1b,
+106,Light Bollard,Light,Must Go,Remove,IMG_0106.JPG,2673,1830,phase 1b,
+107,Light Bollard,Light,Must Go,Remove,IMG_0107.JPG,2729,1849,phase 1b,
+108,Light Bollard,Light,Must Go,Remove,IMG_0108.JPG,2787,1842,phase 1b,
+109,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0109.JPG,2818,1843,phase 1b,MQ
+110,Light Bollard,Light,Must Go,Remove,IMG_0110.JPG,2841,1848,phase 1b,
+111,Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0111.JPG,2852,1807,phase 1b,V
+112,Light Bollard,Light,Must Go,Remove,IMG_0112.JPG,2914,1860,phase 1b,MQ
+113,Light Bollard,Light,Must Go,Remove,IMG_0113.JPG,3020,1870,phase 1b,MQ
+114,Light Bollard,Light,Must Go,Remove,IMG_0114.JPG,3106,1854,phase 1b,MQ
+115,Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0115.JPG,3115,1805,phase 1b,V
+116,Light Bollard,Light,Must Go,Remove,IMG_0116.JPG,3177,1834,phase 1b,MQ
+117,Light Bollard,Light,Must Go,Remove,IMG_0117.JPG,3285,1827,phase 1b,MQ
+118,Light Bollard,Light,Must Go,Remove,IMG_0118.JPG,3408,1844,phase 1b,MQ
+119,Marquette Rock - Waterfall .25 Mile,Special Feature,Must Go,Not Noted,IMG_0119.JPG,3489,1764,phase 1b,MQ
+120,Directional Signage,Special Feature,Must Go,Not Noted,IMG_0120.JPG,3506,1832,phase 1b,MQ
+121,Bench,Site Furnishing,Must Go,Remove,IMG_0121.JPG,3554,1767,phase 1b,MQ
+122,Waterfall Feature,Special Feature,Must Go,Remove,IMG_0122.JPG,3505,1698,phase 1b,MQ
+123,Storm inlet,Utility,Can Stay,Keep,IMG_0123.JPG,3624,1820,phase 1b,
+124,Carson ICV Irrigation Valve,Utility,Must Go,Not Noted,IMG_0124.JPG,3685,1741,phase 1b,V
+125,ICV Rainbird Irrigation,Utility,Must Go,Not Noted,IMG_0125.JPG,3740,1723,phase 1b,V
+126,Storm Inlet,Utility,Must Go,Remove,IMG_0126.JPG,3767,1816,phase 1b,
+127,Speed limit sign,Special Feature,Can Stay,Keep,IMG_0127.JPG,3807,1793,phase 1b,
+128,Storm Outlet,Utility,Must Go,Remove,IMG_0128.JPG,3802,1698,phase 1b,
+129,Storm Inlet,Utility,Must Go,Remove,IMG_0129.JPG,3693,1877,phase 1b,
+130,Landscape Light,Light,Must Go,Not Noted,IMG_0130.JPG,3579,1706,phase 1b,V
+131,Lanscape Light,Light,Must Go,Not Noted,IMG_0131.JPG,3573,1711,phase 1b,V
+132,Landscape Light,Light,Must Go,Remove,IMG_0132.JPG,3517,1720,phase 1b,
+133,Bridge Plaque,Special Feature,Must Go,Remove,IMG_0133.JPG,3429,1692,phase 1b,MQ
+134,Light Bollard,Light,Must Go,Remove,IMG_0134.JPG,3461,1678,phase 1b,MQ
+135,Light Bollard,Light,Must Go,Remove,IMG_0135.JPG,3403,1611,phase 2,MQ
+136,Light Bollard,Light,Must Go,Remove,IMG_0136.JPG,3301,1545,phase 2,
+137,Light Bollard,Light,Must Go,Remove,IMG_0137.JPG,3237,1480,phase 2,
+138,Light Bollard,Light,Must Go,Remove,IMG_0138.JPG,3210,1428,phase 2,
+139,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0139.JPG,3208,1391,phase 2,MQ
+140,Light Bollard,Light,Must Go,Remove,IMG_0140.JPG,3190,1353,phase 2,
+141,Doggy Station/Light Bollard,Light/Site Furnishing,Must Go,Relocate,IMG_0141.JPG,3183,1327,phase 2,V
+142,Light Bollard,Light,Must Go,Remove,IMG_0142.JPG,3044,1205,phase 2,
+143,Light Bollard,Light,Must Go,Remove,IMG_0143.JPG,2977,1184,phase 2,
+144,Sidwalk Plaque - Bernice Davey,Special Feature,Must Go,Not Noted,IMG_0144.JPG,2938,1176,phase 2,MQ
+145,Light Bollard,Light,Must Go,Remove,IMG_0145.JPG,2917,1175,phase 2,
+146,Light Bollard,Light,Must Go,Remove,IMG_0146.JPG,2818,1166,phase 2,
+147,Light Bollard,Light,Must Go,Remove,IMG_0147.JPG,2729,1168,phase 2,
+148,Light Bollard,Light,Must Go,Remove,IMG_0148.JPG,2663,1192,phase 1b,
+149,Carson Irrigation Control Valve,Utility,Must Go,Remove,IMG_0149.JPG,2386,1575,phase 1b,V
+150,Landscape Light,Light,Must Go,Remove,IMG_0150.JPG,2395,1513,phase 1b,
+151,Irrigation Control Valve,Utility,Must Go,Remove,IMG_0151.JPG,2434,1464,phase 1b,V
+152,Light Bollard,Light,Must Go,Remove,IMG_0152.JPG,2460,1471,phase 1b,
+153,Light Bollard,Light,Must Go,Remove,IMG_0153.JPG,2473,1396,phase 1b,
+154,Light Bollard,Light,Must Go,Remove,IMG_0154.JPG,2518,1325,phase 1b,
+155,Light Pole,Light,Can Stay,Keep,IMG_0155.JPG,2450,1291,phase 1b,
+156,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0156.JPG,2585,1337,phase 1b,MQ
+157,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0157.JPG,2599,1315,phase 1b,MQ
+158,Electrical Box,Electrical,Must Go,Remove,IMG_0158.JPG,2545,1346,phase 1b,
+159,PVC Out of Retaining Wall,Utility,Must Go,Not Noted,IMG_0159.JPG,2620,1339,phase 1b,
+160,Exterior Outlet,Electrical,Must Go,Not Noted,IMG_0160.JPG,2572,1326,phase 1b,
+161,Light Bollard - In Bush,Light,Must Go,Remove,IMG_0161.JPG,2602,1238,phase 1b,
+162,Existing Gazebo Pad,Site Furnishing,Can Stay,Keep,IMG_0162.JPG,2662,1135,phase 2,
+163,Existing Gazebo Pad,Site Furnishing,Can Stay,Keep,IMG_0163.JPG,2583,1212,phase 1b,
+164,Light Pole,Light,Can Stay,Keep,IMG_0164.JPG,2577,1169,phase 1b,
+165,Outlet and Ground Light,Electrical/Light,Can Stay,Keep,IMG_0165.JPG,2553,1214,phase 1b,
+166,Existing Gazebo Pad/Ground Light,Site Furnishing/Light,Can Stay,Keep,IMG_0166.JPG,2495,1302,phase 1b,
+167,Light Pole,Light,Can Stay,Keep,IMG_0167.JPG,2661,1082,phase 2,
+168,Bench with Plaque (x2),Site Furnishing,Can Stay,Not Noted,IMG_0168.JPG,2586,1056,phase 1b,MQ
+169,Water Feature,Special Feature,Can Stay,Keep,IMG_0169.JPG,2613,1025,phase 1b,MQ
+170,Light Pole,Light,Can Stay,Keep,IMG_0170.JPG,2565,982,phase 2,
+171,Bench with Plaque,Site Furnishing,Can Stay,Not Noted,IMG_0171.JPG,2540,1005,phase 2,MQ
+172,Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0172.JPG,2551,958,phase 2,V
+173,Light Pole,Light,Can Stay,Keep,IMG_0173.JPG,2478,1068,phase 2,
+174,Bench with Plaque,Site Furnishing,Can Stay,Keep,IMG_0174.JPG,2459,1063,phase 2,MQ
+175,Bench with Plaque,Site Furnishing,Can Stay,Keep,IMG_0175.JPG,2436,1089,phase 2,MQ
+176,Light Pole,Light,Can Stay,Keep,IMG_0176.JPG,2341,1195,phase 1b,
+177,Bench with Plaque,Site Furnishing,Can Stay,Not Noted,IMG_0177.JPG,2350,1177,phase 1b,MQ
+178,Bench with Plaque (x2),Site Furnishing,Can Stay,Not Noted,IMG_0178.JPG,2404,1245,phase 1b,MQ
+179,Storm Drain,Utility,Can Stay,Not Noted,IMG_0179.JPG,2333,1168,phase 1b,
+180,Sprinkler Control Valve,Electrical,Can Stay,Keep,IMG_0180.JPG,2664,1059,phase 2,
+181,Utility Vault,Utility,Can Stay,Keep,IMG_0181.JPG,2640,1000,phase 1a,THW
+182,Storm Drain,Utility,Can Stay,Keep,IMG_0182.JPG,2657,989,phase 2,
+183,Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0183.JPG,2629,1016,phase 2,V
+184,Electrical Box,Electrical,Can Stay,Not Noted,IMG_0184.JPG,2708,1026,phase 2,
+185,Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0185.JPG,2741,1042,phase 2,V
+186,West Detention Pond Water Feature,Utility,Must Go,Not Noted,IMG_0186.JPG,2866,1543,phase 1a,
+187,West Pond Storm Inlet,Utility,Must Go,Remove,IMG_0187.JPG,3102,1164,phase 2,
+188,Irrigation Control Valve,Utility,Must Go,Remove,IMG_0188.JPG,3086,1067,phase 2,V
+189,Irrigation Control Valve,Utility,Must Go,Remove,IMG_0189.JPG,3104,1054,phase 2,V
+190,Irrigation Control Valve,Utility,Must Go,Remove,IMG_0190.JPG,3239,905,phase 2,V
+191,Rainbird Irrigation Lid,Utility,Must Go,Remove,IMG_0191.JPG,3329,826,phase 2,V
+192,Carson Irrigation Lid,Utility,Must Go,Remove,IMG_0192.JPG,3374,777,phase 2,V
+193,Carson Irrigation Lid,Utility,Must Go,Keep,IMG_0193.JPG,3531,659,phase 2,V
+194,Rainbird Irrigation Lid,Utility,Must Go,Keep,IMG_0194.JPG,3553,650,phase 2,V
+195,Stormwater Pump Station,Utility,Can Stay,Keep,IMG_0195.JPG,3485,472,phase 2,
+196,Rainbird Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0196.JPG,3631,445,phase 2,V
+197,Rainbird Irrigation Control Valve,Utility,Must Go,Not Noted,IMG_0197.JPG,3566,221,phase 2,V
+198,Fire Hydrant/Fire Department Connection,Utility,Can Stay,Keep,IMG_0198.JPG,3489,95,phase 1a,
+199,Rainbird Irrigation Lid,Utility,Must Go,Not Noted,IMG_0199.JPG,3521,124,phase 1a,V
+200,Rainbird Irrigation Lid,Utility,Must Go,Not Noted,IMG_0200.JPG,3582,135,phase 1a,V
+201,Light Pole,Light,Can Stay,Keep,IMG_0201.JPG,3568,68,phase 2,
+202,Storm Drain,Utility,Must Go,Remove,IMG_0202.JPG,3767,160,phase 2,
+203,Man Hole,Utility,Can Stay,Keep,IMG_0203.JPG,3789,221,phase 2,V
+204,Light Pole,Light,Can Stay,Keep,IMG_0204.JPG,3870,90,phase 1a,
+205,Bench with Plaque,Site Furnishing,Must Go,Not Noted,IMG_0205.JPG,3852,111,phase 1a,MQ
+206,New Oasis Electrical Box,Electrical,Can Stay,Keep,IMG_0206.JPG,4028,97,phase 1a,
+207,North Entrance Call Box,Electrical,Can Stay,Keep,IMG_0207.JPG,4128,123,phase 2,
+208,North Entry Security Pole,Electrical,Can Stay,Keep,IMG_0208.JPG,3964,28,phase 1a,V
+209,Light Pole,Electrical,Can Stay,Keep,IMG_0209.JPG,4135,101,phase 1a,
+210,North Exit Arm Gate,Electrical,Can Stay,Keep,IMG_0210.JPG,4159,38,phase 1a,V
+211,North Entrance Arm Gate,Electrical,Can Stay,Keep,IMG_0211.JPG,3974,18,phase 1a,V
+212,Rainbird Irrigation Lid,Utility,Must Go,Remove,IMG_0212.JPG,4193,196,phase 1a,V
+213,Sprinkler Box,Electric,Must Go,Remove,IMG_0213.JPG,4061,154,phase 1a,V
+214,Rainbird Irrigation Lid,Utility,Must Go,Remove,IMG_0214.JPG,4027,192,phase 1a,V
+215,Storm Drain,Utility,Must Go,Remove,IMG_0215.JPG,4082,376,phase 1a,
+216,Storm Drain,Utility,Must Go,Remove,IMG_0216.JPG,4249,404,phase 1a,
+217,Storm Drain,Utility,Can Stay,Keep,IMG_0217.JPG,4263,634,phase 1a,SP
+218,Electrical Box,Electrical,Must Go,Not Noted,IMG_0218.JPG,4225,757,phase 2,V
+219,Gas Line Flag,Utility,Must Go,Not Noted,IMG_0219.JPG,4179,645,phase 1a,V
+220,Man Hole,Utility,Must Go,Remove,IMG_0220.JPG,4242,1061,phase 2,
+221,Storm Outlet Into East Pond,Utility,Must Go,Remove,IMG_0221.JPG,4203,1120,phase 2,
+222,Exterior Outlet,Electrical,Can Stay,Keep,IMG_0222.JPG,4292,1306,phase 2,
+223,Guardian Private Utility Locate Flag,Utility,Must Go,Not Noted,IMG_0223.JPG,3849,959,phase 2,V
+224,Irrigation Control Valve,Electrical,Must Go,Remove,IMG_0224.JPG,3800,1536,phase 2,
+225,Utility Vault,Utility,Must Go,Remove,IMG_0225.JPG,3758,1538,phase 1a,THW
+226,Red Guardian Private Utility Locate Flag,Utility,Must Go,Not Noted,IMG_0226.JPG,3685,1532,phase 1a,V
+227,Electrical Box,Electrical,Must Go,Not Noted,IMG_0227.JPG,3636,1569,phase 2,V
+228,Landscape Light,Electrical,Must Go,Remove,IMG_0228.JPG,3574,1581,phase 2,
+229,Lanscape Light,Electrical,Must Go,Remove,IMG_0229.JPG,3503,1576,phase 2,
+230,Landscape Light,Electrical,Must Go,Remove,IMG_0230.JPG,3403,1570,phase 2,
+231,Red Guardian Private Utility Locate Flag,Utility,Must Go,Not Noted,IMG_0231.JPG,3308,1451,phase 1a,V
+232,Irrigation Control Box and Valve,Utility,Must Go,Remove,IMG_0232.JPG,3208,1334,phase 2,V
+233,West Pond PVC Storm Inlet,Utility,Must Go,Remove,IMG_0233.JPG,2889,1287,phase 2,
+234,Rock Swale,Utillity,Must Go,Remove,IMG_0234.JPG,3017,1282,phase 2,
+235,Water Feature Drainage Grate,Utillity,Must Go,Not Noted,IMG_0235.JPG,3381,1728,phase 1a,SP
+236,Rainbird Irrigation Lid,Utility,Can Stay,Keep,IMG_0236.JPG,3998,1730,phase 2,V
+237,Electrical Outlet Post and Electrical Box,Electrical,Can Stay,Keep,IMG_0237.JPG,4090,1717,phase 2,
+238,Storm PVC Pipe East Pond Inlet,Utility,Can Stay,Keep,IMG_0238.JPG,4151,1678,phase 1a,
+239,Pink Mason Private Locate,Utility,Must Go,Not Noted,IMG_0239.JPG,4218,1694,phase 1a,V
+240,Fake Rock,Special Feature,Can Stay,Keep,IMG_0240.JPG,4165,1743,phase 2,MQ
+241,Rainbird Irrigation Control Valve,Utillity,Can Stay,Keep,IMG_0241.JPG,4323,1060,phase 2,V
+242,Electrical Pedistal,Electrical,Can Stay,Keep,IMG_0242.JPG,4429,1068,phase 1a,
+243,Man Hole,Utility,Can Stay,Keep,IMG_0243.JPG,4453,1045,phase 2,
+244,Man Hole,Utility,Can Stay,Keep,IMG_0244.JPG,4446,1008,phase 2,
+245,Fiber Optic Pedistal and MCI Electrical Box,Electrical,Can Stay,Keep,IMG_0245.JPG,4417,922,phase 2,
+246,Rainbird Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0246.JPG,4335,651,phase 2,V
+247,Man Hole,Utility,Can Stay,Keep,IMG_0247.JPG,4339,465,phase 2,
+248,Carson Irrigation Control Valve,Utility,Can Stay,Keep,IMG_0248.JPG,4331,392,phase 2,V
+249,Storm Inlets,Utility,Can Stay,Keep,IMG_0249.JPG,4400,329,phase 2,
+250,Man Hole,Utility,Can Stay,Keep,IMG_0250.JPG,4379,238,phase 2,
+251,Electrial Pedistal,Electrical,Can Stay,Keep,IMG_0251.JPG,4392,174,phase 2,
+252,Water Valve,Utility,Can Stay,Keep,IMG_0252.JPG,4350,227,phase 2,
+253,Sanitary Manhole,Utility,Can Stay,Keep,253.JPG,4334,1945,phase 1a,
+254,Electrical Box,Electrical,Can Stay,Keep,254.JPG,3961,1952,phase 1a,
+255,Electrical Handhole,Electrical,Can Stay,Keep,255.JPG,3951,1933,phase 1a,
+256,Sprinkler Control Valve,Utility,Can Stay,Keep,256.JPG,3919,1910,phase 1a,
+257,Sanitary Manhole,Utility,Can Stay,Keep,257.JPG,3849,1966,phase 1a,
+258,Sprinkler Control Valve,Utility,Can Stay,Keep,258.JPG,3930,1758,phase 1a,
+259,Electrical Handhole,Electrical,Must Go,Keep,259.JPG,3773,1931,phase 1a,
+260,Storm Drain,Utility,Must Go,Keep,260.JPG,3617,1931,phase 1a,
+261,Curb Inlet,Utility,Must Go,Keep,261.JPG,3192,1899,phase 1a,
+262,Curb Inlet,Utility,Must Go,Keep,262.JPG,3861,1940,phase 1a,
+263,Electrical Handhole,Electrical,Must Go,Keep,263.JPG,2158,1883,phase 1b,
+264,Sprinkler Control Valve,Utility,Must Go,Keep,264.JPG,2132,1905,phase 1b,
+265,Light Bollard,Electrical,Can Stay,Not Noted,265.JPG,1802,1524,phase 1b,
+266,Water Cleanout,Utility,Must Go,Remove,266.JPG,2323,1550,phase 1b,
+267,Storm Drain,Utility,Can Stay,Keep,267.JPG,3948,14,phase 1a,
+268,Storm Drain,Utility,Can Stay,Keep,268.JPG,3502,419,phase 1a,
+269,Sprinkler Control Valve,Utility,Must Go,Remove,269.JPG,4216,2256,phase 3,
+270,Gas Meter,Utility,Must Go,Remove,270.JPG,4175,2271,phase 3,
+271,Electric Meter Box,Electrical,Must Go,Remove,271.JPG,4118,2273,phase 3,
+272,Sprinkler Control Valve,Utility,Must Go,Remove,272.JPG,4092,2308,phase 3,
+273,Fence,Site Furnishing,Must Go,Remove,273.JPG,4041,2312,phase 3,
+274,AC Unit,Utility,Must Go,Remove,274.JPG,3960,2269,phase 3,
+275,Mail Box,Site Furnishing,Must Go,Remove,275.JPG,3805,2066,phase 3,
+276,Fence,Site Furnishing,Must Go,Remove,276.JPG,3748,2333,phase 3,
+277,Gas Meter,Utillity,Must Go,Remove,277.JPG,3745,2338,phase 3,
+278,AC Unit,Utillity,Must Go,Remove,278.JPG,3593,2342,phase 3,
+279,Electric Meter Box,Electrical,Must Go,Remove,279.JPG,3559,2345,phase 3,
+280,Fence,Site Furnishing,Must Go,Remove,280.JPG,3563,2369,phase 3,
+281,Cleanout,Utility,Must Go,Remove,281.JPG,3606,2169,phase 3,
+282,Mail Box,Site Furnishing,Must Go,Remove,282.JPG,3449,2065,phase 3,
+283,AC Unit,Utillity,Must Go,Remove,283.PDF,3532,2352,phase 3,
+284,Sprinkler Control Valve,Utillity,Must Go,Keep,284.PDF,3392,2416,phase 3,
+285,Sprinkler Control Valve,Utillity,Must Go,Keep,285.JPG,3278,2441,phase 3,
+286,Storm Drain,Utillity,Must Go,Remove,286.JPG,2389,2346,phase 3,
+287,Cable Box,Utillity,Must Go,Not Noted,287.JPG,3171,2394,phase 3,
+288,AC Unit,Utillity,Must Go,Not Noted,288.JPG,3046,2377,phase 3,
+289,Fence,Site Furnishing,Must Go,Remove,289.JPG,3013,2399,phase 3,
+290,Electrical Meter Box,Electrical,Must Go,Remove,290.JPG,3013,2375,phase 3,
+291,AC Unit,Utility,Must Go,Remove,291.JPG,2971,2374,phase 3,
+292,Sprinkler Valve,Utility,Must Go,Not Noted,292.JPG,2703,2450,phase 3,V
+293,Sprinkler Control Valve,Utility,Must Go,Keep,293.JPG,2735,2449,phase 3,
+294,Fence,Site Furnishing,Must Go,Remove,294.JPG,2488,2415,phase 3,
+295,Stop Sign,Site Furnishing,Must Go,Remove,295.JPG,2219,2115,phase 3,
+296,Mail Box,Site Furnishing,Must Go,Remove,296.JPG,2512,2097,phase 3,
+297,Mail Box,Site Furnishing,Must Go,Remove,297.JPG,2970,2137,phase 3,
+298,Water Valve,Utility,Must Go,Remove,298.JPG,3057,2183,phase 3,
+299,Storm Drain,Utility,Must Go,Remove,299.JPG,2802,2120,phase 3,
+300,Storm Drain,Utility,Must Go,Remove,300.JPG,2750,2344,phase 3,
+301,Sprinkler Control Valve,Utility,Must Go,Remove,301.JPG,4010,184,phase 2,
+302,Electrical Handhole,Electrical,Must Go,Not Noted,302.JPG,2384,1572,phase 1b,V
+303,Gas Meter,Utility,Must Go,Remove,303.JPG,3406,2385,phase 3,
+304,Storm Drain,Utility,Must Go,Remove,304.JPG,3389,2099,phase 3,
