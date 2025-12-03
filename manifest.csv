@@ -299,3 +299,4 @@ id,title,tags,ssc_status,drwg_status,photo_file,x_px,y_px,phase,designation
 302,Electrical Handhole,Electrical,Must Go,Not Noted,302.jpg,2384,1572,phase 1b,V
 303,Gas Meter,Utility,Must Go,Remove,303.jpg,3406,2385,phase 3,
 304,Storm Drain,Utility,Must Go,Remove,304.jpg,3389,2099,phase 3,
+305,Rock Column,Special Feature,Must Go,Keep,305.jpg,4296,168,phase 1a,MQ
