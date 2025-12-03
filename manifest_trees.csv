@@ -95,3 +95,7 @@ id,title,tags,ssc_status,drwg_status,photo_file,x_px,y_px,phase,designation
 97,Pine Tree (Both),Tree,Can Stay,Keep,T97.jpg,4248,1686,phase 1a,MQ
 98,Pine Tree,Tree,Can Stay,Keep,T98.jpg,4231,1493,phase 1a,MQ
 99,Pine Tree (Both),Tree,Can Stay,Keep,T99.jpg,4235,1327,phase 1a,MQ
+100,Oak Tree,Tree,Can Stay,Keep,t100.jpg,4279,472,phase 1a,MQ
+101,Oak Tree,Tree,Must Go,Keep,t101.jpg,4265,257,phase 1a,MQ
+102,Oak Tree,Tree,Must Go,Remove,t102.jpg,4217,189,phase 1a,MQ
+103,Oak Tree,Tree,Must Go,Keep,t103.jpg,4284,219,phase 1a,MQ
